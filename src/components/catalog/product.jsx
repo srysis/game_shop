@@ -1,30 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { Link } from "react-router";
 
 import "../../style/catalog/product/product.scss"
 
-class Product extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-
-	render() {
-		return(
-			<div className="product">
-				<div className="overlay"></div>
+function Product( {item} ) {
+	return(
+		<div className="product">
+			<div className="link_container">
+				<div className="overlay">
+					<Link to={`/product/${item.id}`} className="details" />
+				</div>
 				<div className="box_art">
-					<img src={this.props.boxArt} />
+					<img src={`media/images/box_art/${item.box_art}`} alt={`${item.name} box art`} />
 				</div>
 				<div className="title">
-					<h2>{this.props.title}</h2>
-				</div>
-				<div className="info">
-					<div className="price"><p>{this.props.price}</p></div>
-					<button type="button" className="details">View details</button>
+					<h2>{item.name}</h2>
 				</div>
 			</div>
-		)
-	}
+			<div className="info">
+				<div className="price"><p>{item.price}</p></div>
+				<Link to={`/product/${item.id}`} className="details" >View details</Link>
+			</div>
+		</div>
+	)
 }
 
 export default Product;
