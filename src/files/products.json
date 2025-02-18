@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name": "Dishonored",
+		"box_art": "media/images/box_art/dishonored.jpg",
+		"price": "$10.00"
+	},
+	{
+		"id": 2,
+		"name": "Dishonored 2",
+		"box_art": "media/images/box_art/dishonored_2.jpg",
+		"price": "$20.00"
+	},
+	{
+		"id": 3,
+		"name": "Warhammer 40,000: Darktide",
+		"box_art": "media/images/box_art/darktide.jpg",
+		"price": "$30.00"
+	}
+]
