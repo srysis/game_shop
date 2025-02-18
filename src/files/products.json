@@ -2,19 +2,22 @@
 	{
 		"id": 1,
 		"name": "Dishonored",
-		"box_art": "media/images/box_art/dishonored.jpg",
-		"price": "$10.00"
+		"box_art": "dishonored.jpg",
+		"price": "$10.00",
+		"short_desc": "Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal."
 	},
 	{
 		"id": 2,
 		"name": "Dishonored 2",
-		"box_art": "media/images/box_art/dishonored_2.jpg",
-		"price": "$20.00"
+		"box_art": "dishonored_2.jpg",
+		"price": "$20.00",
+		"short_desc": "Reprise your role as a supernatural assassin in Dishonored 2. Declared a “masterpiece” by Eurogamer and hailed “a must-play revenge tale” by Game Informer, Dishonored 2 is the follow up to Arkane’s 1st-person action blockbuster & winner of 100+ 'Game of the Year' awards, Dishonored."
 	},
 	{
 		"id": 3,
 		"name": "Warhammer 40,000: Darktide",
-		"box_art": "media/images/box_art/darktide.jpg",
-		"price": "$30.00"
+		"box_art": "darktide.jpg",
+		"price": "$30.00",
+		"short_desc": "Take back the city of Tertium from hordes of bloodthirsty foes in this intense and brutal action shooter. Warhammer 40,000: Darktide is the new co-op focused experience from the award-winning team behind the Vermintide series. As Tertium falls, Rejects Will Rise."
 	}
 ]
