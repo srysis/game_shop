@@ -79,3 +79,81 @@ div.product_screenshots {
 		}
 	}
 }
+
+div#image_fullscreen_overlay_container {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.98);
+	animation: scale_container 0.2s;
+
+	img.image_fullscreen {
+		display: block;
+		width: 60vw;
+		height: 80vh;
+		object-fit: contain;
+		padding: 30px;
+		border: 2px solid gray;
+		border-radius: 5px;
+		margin: auto;
+		margin-top: 3.5%;
+		background-color: black;
+		animation: scale_image 0.2s;
+	}
+
+	#prev_image, #next_image, #close_button {
+		cursor: pointer;
+	}
+
+	#prev_image, #next_image {
+		height: 25%;
+		margin: auto 0;
+		border: none;
+		padding: 3.5%;
+		font-size: 3em;
+		background-color: transparent;
+		color: #fff;
+	}
+
+	#close_button {
+		position: absolute;
+		top: 1%;
+		right: 1%;
+		border: none;
+		padding: 4px 8px;
+		background-color: transparent;
+
+		img {
+			width: 36px;
+			height: 36px;
+			filter: invert(100%) sepia(63%) saturate(0%) hue-rotate(65deg) brightness(105%) contrast(101%);
+		}
+	}
+
+	#prev_image:hover, #next_image:hover, #close_button:hover {
+		background-color: #333;
+	}
+	
+}
+
+@keyframes scale_container {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes scale_image {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
