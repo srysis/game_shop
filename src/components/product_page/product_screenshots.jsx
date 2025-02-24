@@ -116,17 +116,38 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 		forceUpdate();
 	}
 
+
+	// this function will iterate through 'image_paths' array
+	// to find a matching name for given one
+	// once found, it's index will be returned
+	function setDataIndex(image_name) {
+		let found_index = 0;
+
+		image_paths.forEach((image, index) => {
+			if (image_name === image) {
+				found_index = index + 1;
+			} 
+		})
+
+		return found_index;
+		
+	}
+
 	return(
 		<div className="product_screenshots">
 			<div className="left_button" onClick={ () => { goToLeft(); } } >&lt;</div>
 				{current_images.map((image, index) => 
 					{
+						let found_index = setDataIndex(image);
+
 						return <Screenshot 
 									key={index + 1} 
 									image_src={image} 
+									data_index={found_index}
 									onClickHandler={ () => { 
 											toggleFullscreenFunction(true); 
 											setCurrentImageFunction(image);  
+											setCurrentImageIndexFunction(found_index);
 											console.log('toggle on'); 
 										} 
 									} 
