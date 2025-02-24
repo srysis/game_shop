@@ -15,6 +15,7 @@ function ProductPage() {
 
 	const [is_fullscreen, toggleFullscreen] = React.useState(false);
 	const [current_image, setCurrentImage] = React.useState();
+
 	const [current_image_index, setCurrentImageIndex] = React.useState(0);
 
 	function setFullscreenState(value) {
@@ -62,6 +63,7 @@ function ProductPage() {
 				<ScreenshotOverlay 
 					image_list={product.screenshots_small} 
 					image={current_image} 
+					image_index={current_image_index}
 					toggleFullscreenFunction={setFullscreenState} 
 				/>
 			}
