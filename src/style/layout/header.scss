@@ -1,0 +1,30 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 9%;
+	background-color: #ddd;
+
+	h1#logo {
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	input#search_bar {
+		width: 65%;
+		height: 50px;
+		padding: 0 1%;
+	}
+
+	img.cart_icon {
+		width: 50px;
+		border-radius: 10px;
+		padding: 5px;
+	}
+
+	img.cart_icon:hover {
+		background-color: #ccc;
+	}
+}
