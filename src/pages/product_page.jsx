@@ -6,9 +6,10 @@ import products from "../files/products.json"
 import ProductScreenshots from "../components/product_page/product_screenshots.jsx"
 import ScreenshotOverlay from "../components/product_page/screenshot_overlay.jsx"
 
+
 import "../style/catalog/product/product_page.scss"
 
-function ProductPage() {
+function ProductPage({addToCartFunction, isDuplicate}) {
 	const { id } = useParams();
 
 	const product = products[id - 1];
@@ -23,10 +24,12 @@ function ProductPage() {
 
 		// hide scrollbar and adjust margin if fullscreen overlay is visible
 		if (value) { 
-			document.body.style.overflow = 'hidden';
+			document.body.style.overflowX = 'hidden';
+			document.body.style.overflowY = 'hidden';
 			document.body.style.marginRight = 0.4 + "%";
 		} else { 
-			document.body.style.overflow = 'visible';
+			document.body.style.overflowX = 'visible';
+			document.body.style.overflowY = 'scroll';
 			document.body.style.marginRight = 0;
 		}
 	}
@@ -39,6 +42,15 @@ function ProductPage() {
 		setCurrentImageIndex(index);
 	}
 
+	function onAddHandler(item) {
+		if (isDuplicate(item)) { 
+			alert("This product is already in your cart.");
+			return;
+		}
+		
+		addToCartFunction(item);
+	}
+
 	return(
 		<div id="product_page">
 			<div className="product_details">
@@ -48,7 +60,7 @@ function ProductPage() {
 				<div className="info_and_options">
 					<h2>{product.name}</h2>
 					<p>{product.short_desc}</p>
-					<button type="button" className="buy">Add to Cart</button>
+					<button type="button" className="buy" onClick={ () => { onAddHandler(product); } } >Add to Cart</button>
 				</div>
 			</div>
 
