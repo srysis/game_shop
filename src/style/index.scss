@@ -5,7 +5,8 @@
 }
 
 body {
-  padding: 1%;
+  overflow-y: scroll;
+  font-size: 0.9em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
