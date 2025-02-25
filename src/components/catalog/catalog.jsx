@@ -1,10 +1,10 @@
 import React from 'react';
 
-import products from "../files/products.json"
+import products from "../../files/products.json"
 
-import "../style/catalog/catalog.scss"
+import "../../style/catalog/catalog.scss"
 
-import Product from "../components/catalog/product.jsx"
+import Product from "./product.jsx"
 
 function Catalog() {
 	return(
