@@ -1,0 +1,51 @@
+div.message {
+	width: 24vw;
+	position: absolute;
+	z-index: 4;
+	top: 100px;
+	right: 0.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	padding: 15px 1vw;
+	box-shadow: 0px 0px 20px #aaa;
+	background-color: #00A912;
+	color: white;
+	animation: fadeIn 0.5s, 0.5s fadeOut 4.6s;
+	
+
+	div.icon_container {
+		width: 15%;
+	}
+
+	div.text_container {
+		width: 80%;
+		padding: 0 1vw;
+
+		h2, p {
+			letter-spacing: .4px;
+		}
+
+		h2 {
+			margin-bottom: 3px;
+			font-size: 2.4em;
+			border-bottom: 1px solid white;
+		}
+
+		p {
+			margin-top: 3px;
+			font-size: 1.2em;
+		}
+	}
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
