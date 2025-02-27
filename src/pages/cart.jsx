@@ -16,7 +16,7 @@ function Cart( {products_in_cart, removeFunction} ) {
 	} else {
 		return (
 			<div id="cart">
-				<h2>Cart is empty</h2>
+				<h2>Your cart is currently empty.</h2>
 			</div>
 		)
 	}
