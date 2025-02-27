@@ -23,18 +23,27 @@ div#product_page {
 				font-size: 1.4em;
 			}
 
-			button.buy {
+			button.buy, button.is_in_cart {
+				width: calc(100vw - 90vw);
 				margin-top: 40px;
 				border: 2px solid black;
 				border-radius: 3px;
 				padding: 12px 5%;
-				background-color: transparent;
 				font-weight: bold;
+			}
+
+			button.buy {
+				background-color: transparent;
 				cursor: pointer;
 			}
 
 			button.buy:hover {
 				background-color: #ddd;
+			}
+
+			button.is_in_cart {
+				background-color: #ddd;
+				cursor: not-allowed;
 			}
 		}
 	}
