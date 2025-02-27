@@ -19,6 +19,8 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 
 	const [current_image_index, setCurrentImageIndex] = React.useState(0);
 
+	let is_duplicate = isDuplicate(product);
+
 	function setFullscreenState(value) {
 		toggleFullscreen(value);
 
@@ -44,7 +46,6 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 
 	function onAddHandler(item) {
 		if (isDuplicate(item)) { 
-			alert("This product is already in your cart.");
 			return;
 		}
 		
@@ -60,7 +61,8 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 				<div className="info_and_options">
 					<h2>{product.name}</h2>
 					<p>{product.short_desc}</p>
-					<button type="button" className="buy" onClick={ () => { onAddHandler(product); } } >Add to Cart</button>
+					{ !is_duplicate && <button type="button" className="buy" onClick={ () => { onAddHandler(product); } } >Add to Cart</button> }
+					{ is_duplicate && <button type="button" className="is_in_cart" disabled >In the cart</button> }
 				</div>
 			</div>
 
