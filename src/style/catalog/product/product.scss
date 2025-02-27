@@ -1,11 +1,13 @@
 div.product {
-	width: 12vw;
-	margin-right: 1vw;
-	border: 2px solid black;
-	border-radius: 3px;
+	width: 11vw;
+	margin-right: 2vw;
+	border: 2px solid #ccc;
+	border-radius: 5px;
 	padding: 10px 1%;
-	background-color: #fff;
+	box-shadow: 0 0 15px #ddd;
+	background-color: transparent;
 	cursor: pointer;
+	transition: transform 0.05s;
 
 	div.link_container {
 		position: relative;
@@ -26,8 +28,8 @@ div.product {
 			img {
 				width: auto;
 				height: auto;
-				max-width: 220px;
-				max-height: 220px;
+				max-width: 200px;
+				max-height: 200px;
 			}
 		}
 
@@ -71,4 +73,5 @@ div.product {
 
 div.product:hover {
 	background-color: #eee;
+	transform: scale(1.05);
 }
