@@ -20,9 +20,13 @@ div#cart {
 	margin: 40px 8.5%;
 	border: 2px solid #ccc;
 	border-radius: 10px;
-	padding: 20px 1vw;
+	padding: 20px 3vw;
 	box-shadow: 0 0 30px #ddd;
 	background-color: #fff;
+
+	h1 {
+		font-size: 2.4em;
+	}
 
 	div.cart_product {
 		margin: 30px 0;
@@ -58,6 +62,7 @@ div#cart {
 
 				h2 {
 					margin-bottom: 10px;
+					font-size: 2em;
 
 					a {
 						text-decoration: none;
@@ -97,8 +102,26 @@ div#cart {
 	div.cart_product:hover {
 		background-color: rgba(0, 0, 0, 0.1);
 	}
+}
 
-	h2 {
-		font-size: 2em;
+div#total_price {
+	display: flex;
+	justify-content: flex-end;
+	align-items: baseline;
+	padding: 10px 2%;
+
+	div {
+		margin: 5px 2vw;
+	}
+
+	div#price {
+		margin-right: 0;
+
+		p {
+			font-size: 1.6em;
+			font-weight: bold;
+			font-style: italic;
+		}
+		
 	}
 }
