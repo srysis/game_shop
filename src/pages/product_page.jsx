@@ -67,7 +67,7 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 			</div>
 
 			<ProductScreenshots 
-				image_list={product.screenshots_small}
+				image_list={product.screenshots_ld}
 				toggleFullscreenFunction={setFullscreenState}
 				setCurrentImageFunction={setCurrentImageState}
 				setCurrentImageIndexFunction={setCurrentImageIndexState}
@@ -75,7 +75,7 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 
 			{is_fullscreen && 
 				<ScreenshotOverlay 
-					image_list={product.screenshots_small} 
+					image_list={product.screenshots_hd} 
 					image={current_image} 
 					image_index={current_image_index}
 					toggleFullscreenFunction={setFullscreenState} 
