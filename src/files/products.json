@@ -5,13 +5,21 @@
 		"box_art": "dishonored.jpg",
 		"price": "$10.00",
 		"short_desc": "Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.",
-		"screenshots_small": {
-			"1": "dishonored/1_600x338.jpg",
-			"2": "dishonored/2_600x338.jpg",
-			"3": "dishonored/3_600x338.jpg",
-			"4": "dishonored/4_600x338.jpg",
-			"5": "dishonored/5_600x338.jpg",
-			"6": "dishonored/6_600x338.jpg"
+		"screenshots_ld": {
+			"1": "dishonored/ld/1_600x338.jpg",
+			"2": "dishonored/ld/2_600x338.jpg",
+			"3": "dishonored/ld/3_600x338.jpg",
+			"4": "dishonored/ld/4_600x338.jpg",
+			"5": "dishonored/ld/5_600x338.jpg",
+			"6": "dishonored/ld/6_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "dishonored/hd/1_1920x1080.jpg",
+			"2": "dishonored/hd/2_1920x1080.jpg",
+			"3": "dishonored/hd/3_1920x1080.jpg",
+			"4": "dishonored/hd/4_1920x1080.jpg",
+			"5": "dishonored/hd/5_1920x1080.jpg",
+			"6": "dishonored/hd/6_1920x1080.jpg"
 		}
 	},
 	{
@@ -20,15 +28,25 @@
 		"box_art": "dishonored_2.jpg",
 		"price": "$20.00",
 		"short_desc": "Reprise your role as a supernatural assassin in Dishonored 2. Declared a “masterpiece” by Eurogamer and hailed “a must-play revenge tale” by Game Informer, Dishonored 2 is the follow up to Arkane’s 1st-person action blockbuster & winner of 100+ 'Game of the Year' awards, Dishonored.",
-		"screenshots_small": {
-			"1": "dishonored_2/1_600x338.jpg",
-			"2": "dishonored_2/2_600x338.jpg",
-			"3": "dishonored_2/3_600x338.jpg",
-			"4": "dishonored_2/4_600x338.jpg",
-			"5": "dishonored_2/5_600x338.jpg",
-			"6": "dishonored_2/6_600x338.jpg",
-			"7": "dishonored_2/7_600x338.jpg",
-			"8": "dishonored_2/8_600x338.jpg"
+		"screenshots_ld": {
+			"1": "dishonored_2/ld/1_600x338.jpg",
+			"2": "dishonored_2/ld/2_600x338.jpg",
+			"3": "dishonored_2/ld/3_600x338.jpg",
+			"4": "dishonored_2/ld/4_600x338.jpg",
+			"5": "dishonored_2/ld/5_600x338.jpg",
+			"6": "dishonored_2/ld/6_600x338.jpg",
+			"7": "dishonored_2/ld/7_600x338.jpg",
+			"8": "dishonored_2/ld/8_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "dishonored_2/hd/1_1920x1080.jpg",
+			"2": "dishonored_2/hd/2_1920x1080.jpg",
+			"3": "dishonored_2/hd/3_1920x1080.jpg",
+			"4": "dishonored_2/hd/4_1920x1080.jpg",
+			"5": "dishonored_2/hd/5_1920x1080.jpg",
+			"6": "dishonored_2/hd/6_1920x1080.jpg",
+			"7": "dishonored_2/hd/7_1920x1080.jpg",
+			"8": "dishonored_2/hd/8_1920x1080.jpg"
 		}
 	},
 	{
@@ -37,14 +55,23 @@
 		"box_art": "darktide.jpg",
 		"price": "$30.00",
 		"short_desc": "Take back the city of Tertium from hordes of bloodthirsty foes in this intense and brutal action shooter. Warhammer 40,000: Darktide is the new co-op focused experience from the award-winning team behind the Vermintide series. As Tertium falls, Rejects Will Rise.",
-		"screenshots_small": {
-			"1": "darktide/1_600x338.jpg",
-			"2": "darktide/2_600x338.jpg",
-			"3": "darktide/3_600x338.jpg",
-			"4": "darktide/4_600x338.jpg",
-			"5": "darktide/5_600x338.jpg",
-			"6": "darktide/6_600x338.jpg",
-			"7": "darktide/7_600x338.jpg"
+		"screenshots_ld": {
+			"1": "darktide/ld/1_600x338.jpg",
+			"2": "darktide/ld/2_600x338.jpg",
+			"3": "darktide/ld/3_600x338.jpg",
+			"4": "darktide/ld/4_600x338.jpg",
+			"5": "darktide/ld/5_600x338.jpg",
+			"6": "darktide/ld/6_600x338.jpg",
+			"7": "darktide/ld/7_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "darktide/hd/1_1920x1080.jpg",
+			"2": "darktide/hd/2_1920x1080.jpg",
+			"3": "darktide/hd/3_1920x1080.jpg",
+			"4": "darktide/hd/4_1920x1080.jpg",
+			"5": "darktide/hd/5_1920x1080.jpg",
+			"6": "darktide/hd/6_1920x1080.jpg",
+			"7": "darktide/hd/7_1920x1080.jpg"
 		}
 	}
 ]
