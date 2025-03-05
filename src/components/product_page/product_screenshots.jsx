@@ -20,16 +20,27 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 	// remove all elements for new array after a certain index (3, in this case)
 	cloned_image_array.length = 3;
 
-	// 'current_images' array will store paths that are currently rendered
-	// it's elements will change after every call of 'goToLeft()' or 'goToRight()' functions
-	// initially, it stores first 3 paths of 'image_list', so that only they are shown on a page
+	// 'current_images' array will store paths to images that are or will be rendered;
+	// it's elements will change after every call of 'goToLeft()' or 'goToRight()' functions;
+	// initially, it stores first 3 images of 'image_list', so that only they are shown on a page
 	const [current_images, setCurrentImages] = React.useState(cloned_image_array);
-
 
 	// to properly define which images should render next and which shouldn't,
 	// we need to keep track of which image is currently on the left end, and which is on the right end
 	const [image_index_to_left, setImageIndexToLeft] = React.useState(1);
 	const [image_index_to_right, setImageIndexToRight] = React.useState(cloned_image_array.length)
+
+
+	// IMPORTANT NOTE: it is possible to trigger 'useEffect' hook on prop change...
+	// due to how React handles states(?), 'current_images' were not updating on prop change
+	// which could happen when going from one product page to another through search results.
+	// so it is important to refresh 'current_images' with relevant data on 'image_list' prop change.
+	// we also reset both indexes for image navigating
+	React.useEffect(() => {
+		setCurrentImages(cloned_image_array);
+		setImageIndexToLeft(1);
+		setImageIndexToRight(cloned_image_array.length);
+	}, [image_list])
 
 
 	// goToLeft() and goToRight() functions will calculate index values that should come next
@@ -130,11 +141,10 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 		})
 
 		return found_index;
-		
 	}
 
 	return(
-		<div className="product_screenshots">
+		<div className="product_screenshots" >
 			<div className="left_button" onClick={ () => { goToLeft(); } } >&lt;</div>
 				{current_images.map((image, index) => 
 					{
