@@ -21,7 +21,9 @@ function Layout( {was_added, was_removed} ) {
 			{ was_added && <SuccessAddMessage type={message_type} /> }
 			{ was_removed && <SuccessRemoveMessage type={message_type} /> }
 			<Header />
-			<Outlet />
+			<main>
+				<Outlet />
+			</main>
 		</>
 	);
 }
