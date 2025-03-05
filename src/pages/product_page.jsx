@@ -61,8 +61,12 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 				<div className="info_and_options">
 					<h2>{product.name}</h2>
 					<p>{product.short_desc}</p>
-					{ !is_duplicate && <button type="button" className="buy" onClick={ () => { onAddHandler(product); } } >Add to Cart</button> }
-					{ is_duplicate && <button type="button" className="is_in_cart" disabled >In the cart</button> }
+					<div className="buy_container">
+						<p className="price">{product.price}</p>
+						{ !is_duplicate && <button type="button" className="buy" onClick={ () => { onAddHandler(product); } } >Add to Cart</button> }
+						{ is_duplicate && <button type="button" className="is_in_cart" disabled >In the cart</button> }
+					</div>
+					
 				</div>
 			</div>
 
