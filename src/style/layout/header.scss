@@ -2,8 +2,18 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 30px 9%;
+	padding: 30px 5%;
 	background-color: #ddd;
+
+	div#search_overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 4;
+	}
 
 	h1#logo {
 		a {
@@ -13,7 +23,9 @@ header {
 	}
 
 	input#search_bar {
-		width: 65%;
+		position: relative;
+		z-index: 5;
+		width: 75%;
 		height: 50px;
 		padding: 0 1%;
 	}
