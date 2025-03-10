@@ -13,8 +13,11 @@ function App() {
 	const [was_added, setAdded] = React.useState(false);
 	const [was_removed, setRemoved] = React.useState(false);
 
-
 	function showMessage(type) {
+		// reset states to clear all previous messages
+		setAdded(false);
+		setRemoved(false)
+
 		if (type === "add") {
 			setAdded(true);
 
