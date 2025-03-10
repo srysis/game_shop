@@ -1,5 +1,10 @@
 div#product_page {
-	padding: 10px 5%;
+	margin: 40px 4%;
+	border: 2px solid #bbb;
+	border-radius: 10px;
+	padding: 0 1%;
+	box-shadow: 0 0 15px #bbb;
+	background-color: #fff;
 
 	div.product_details {
 		display: flex;
@@ -8,13 +13,11 @@ div#product_page {
 		margin: 50px 0;
 
 		div.box_art {
-			width: auto;
-
 			img {
 				width: auto;
 				height: auto;
-				max-width: 330px;
-				max-height: 330px;
+				max-width: 100%;
+				max-height: 100%;
 			}
 		}
 
@@ -46,7 +49,6 @@ div#product_page {
 				}
 
 				button.buy, button.is_in_cart {
-					width: calc(100vw - 90vw);
 					border: 2px solid #ccc;
 					border-radius: 3px;
 					padding: 12px 5%;
