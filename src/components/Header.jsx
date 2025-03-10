@@ -25,12 +25,18 @@ function Header() {
 			{is_searching &&
 				<div id="search_overlay" onClick={() => setSearching(false)} ></div>
 			}
-			<h1 id="logo"><Link to="/">Game Shop</Link></h1>
-			<SearchBar setSearchQueueFunction={setSearchQueueFunction} setSearchingFunction={setSearchingFunction} />
-			{(is_searching && search_queue !== "") &&
-				<SearchResults setSearchingFunction={setSearchingFunction} search_queue={search_queue.toLowerCase()} />
-			}
-			<Link to="/cart" ><img src={cart_icon} alt="Go to cart" className="cart_icon" /></Link>
+			<div id="logo_container">
+				<h1 id="logo"><Link to="/">Game Shop</Link></h1>
+			</div>
+			<div id="search_container">
+				<SearchBar setSearchQueueFunction={setSearchQueueFunction} setSearchingFunction={setSearchingFunction} />
+				{(is_searching && search_queue !== "") &&
+					<SearchResults setSearchingFunction={setSearchingFunction} search_queue={search_queue.toLowerCase()} />
+				}
+			</div>
+			<div id="cart_link_container">
+				<Link to="/cart" ><img src={cart_icon} alt="Go to cart" className="cart_icon" /></Link>
+			</div>
 		</header>
 	);
 }
