@@ -1,11 +1,15 @@
 import React from 'react';
 
+import useTitle from "../hooks/useTitle.jsx"
+
 import Catalog from "../components/catalog/catalog.jsx"
 import Filters from "../components/filters/filters.jsx"
 
 import "../style/home.scss"
 
 function Home() {
+	useTitle("Games Shop")
+
 	const [filters, setFilters] = React.useState([]);
 
 	function setFiltersFunction(filter) {

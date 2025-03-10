@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
 
+import useTitle from "../hooks/useTitle.jsx"
+
 import products from "../files/products.json"
 
 import ProductScreenshots from "../components/product_page/product_screenshots.jsx"
@@ -13,6 +15,8 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 	const { id } = useParams();
 
 	const product = products[id - 1];
+
+	useTitle(`${product.name} on Games Shop`);
 
 	const [is_fullscreen, toggleFullscreen] = React.useState(false);
 	const [current_image, setCurrentImage] = React.useState();
