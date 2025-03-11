@@ -28,9 +28,18 @@ div#product_page {
 				font-size: 3em;
 			}
 
+			span > span {
+				margin-right: 10px;
+				border: 1px solid #888;
+				border-radius: 5px;
+				padding: 3px 15px;
+				background-color: #eee;
+				font-size: 1.1em;
+			}
+
 			p {
 				margin-top: 30px;
-				font-size: 1.4em;
+				font-size: 1.5em;
 			}
 
 			div.buy_container {
@@ -76,11 +85,32 @@ div#product_page {
 		}
 	}
 
+	div#description_wrapper {
+		padding: 0 6%;
+
+		div.description_title {
+			h2 {
+				padding: 0 2.5%;
+				font-size: 1.8em;
+			}
+		}
+
+		div.product_description {
+			font-size: 1.3em;
+
+			p {
+				margin: 30px 0;
+				text-indent: 2em;
+			}
+		}
+	}
+	
+
 	div.product_screenshots {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
+		width: 96%;
 		margin: 50px auto;
 		border: 2px solid #ccc;
 		border-radius: 10px;
