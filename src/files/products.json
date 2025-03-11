@@ -10,6 +10,10 @@
 			"3": "Immersive Sim"
 		},
 		"short_desc": "Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.",
+		"desc": {
+			"1": "<p>Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal. Pursue your enemies under the cover of darkness or ruthlessly attack them head on with weapons drawn. The outcome of each mission plays out based on the choices you make.</p>",
+			"2": "<p>Dishonored is set in Dunwall, an industrial whaling city where strange steampunk- inspired technology and otherworldly forces coexist in the shadows. You are the once-trusted bodyguard of the beloved Empress. Framed for her murder, you become an infamous assassin, known only by the disturbing mask that has become your calling card. In a time of uncertainty, when the city is besieged by plague and ruled by a corrupt government armed with industrial technologies, dark forces conspire to bestow upon you abilities beyond those of any common man – but at what cost? The truth behind your betrayal is as murky as the waters surrounding the city, and the life you once had is gone forever.</p>"
+		},
 		"screenshots_ld": {
 			"1": "dishonored/ld/1_600x338.jpg",
 			"2": "dishonored/ld/2_600x338.jpg",
@@ -32,11 +36,16 @@
 		"name": "Dishonored 2",
 		"box_art": "dishonored_2.jpg",
 		"price": "$20.00",
-		"short_desc": "Reprise your role as a supernatural assassin in Dishonored 2. Declared a “masterpiece” by Eurogamer and hailed “a must-play revenge tale” by Game Informer, Dishonored 2 is the follow up to Arkane’s 1st-person action blockbuster & winner of 100+ 'Game of the Year' awards, Dishonored.",
 		"tags": {
 			"1": "Action",
 			"2": "Stealth",
 			"3": "Immersive Sim"
+		},
+		"short_desc": "Reprise your role as a supernatural assassin in Dishonored 2. Declared a “masterpiece” by Eurogamer and hailed “a must-play revenge tale” by Game Informer, Dishonored 2 is the follow up to Arkane’s 1st-person action blockbuster & winner of 100+ 'Game of the Year' awards, Dishonored.",
+		"desc": {
+			"1": "<p>Praised by PC Gamer as “brilliant”, IGN as “amazing” and “a superb sequel”, declared a “masterpiece” by Eurogamer, and hailed “a must-play revenge tale among the best in its class” by Game Informer, Dishonored 2 is the follow up to Arkane Studio's first-person action blockbuster and winner of more than 100 'Game of the Year' awards, Dishonored.</p>",
+			"2": "<p>Play your way in a world where mysticism and industry collide. Will you choose to play as Empress Emily Kaldwin or the royal protector, Corvo Attano? Will you make your way through the game unseen, make full use of its brutal combat system, or use a blend of both? How will you combine your character's unique set of powers, weapons and gadgets to eliminate your enemies? The story responds to your choices, leading to intriguing outcomes, as you play through each of the game's hand-crafted missions.</p>",
+			"3": "<p>Dishonored 2 is set 15 years after the Lord Regent has been vanquished and the dreaded Rat Plague has passed into history. An otherworldly usurper has seized Empress Emily Kaldwin’s throne, leaving the fate of the Isles hanging in the balance. As Emily or Corvo, travel beyond the legendary streets of Dunwall to Karnaca, the once-dazzling coastal city that holds the keys to restoring Emily to power. Armed with the Mark of the Outsider and powerful new abilities, track down your enemies and take back what’s rightfully yours.</p>"
 		},
 		"screenshots_ld": {
 			"1": "dishonored_2/ld/1_600x338.jpg",
@@ -64,12 +73,19 @@
 		"name": "Warhammer 40,000: Darktide",
 		"box_art": "darktide.jpg",
 		"price": "$30.00",
-		"short_desc": "Take back the city of Tertium from hordes of bloodthirsty foes in this intense and brutal action shooter. Warhammer 40,000: Darktide is the new co-op focused experience from the award-winning team behind the Vermintide series. As Tertium falls, Rejects Will Rise.",
 		"tags": {
 			"1": "Action",
 			"2": "Shooter",
 			"3": "PvE",
 			"4": "Horde Shooter"
+		},
+		"short_desc": "Take back the city of Tertium from hordes of bloodthirsty foes in this intense and brutal action shooter. Warhammer 40,000: Darktide is the new co-op focused experience from the award-winning team behind the Vermintide series. As Tertium falls, Rejects Will Rise.",
+		"desc": {
+			"1": "<p>Built on the legacy of Vermintide 2’s best-in-class melee combat, Warhammer 40,000: Darktide introduces intense WH40K gunplay to the mix. Master the balance between ranged and melee combat as you fight through a slew of enemies. Feel the impact of each swipe, swing, and slice of a chainsword, or fry some flesh with a lasgun.</p>",
+			"2": "<p>Darktide is a co-op game. Wandering too far, risks punishment by foes looking to immobilize or capture stray Rejects, such as the slavering Chaos Hound or the Moebian Trapper. Once you fall prey to such foes, only your teammates can save you! More than that, your innate toughness – your determination to press on through the pain – only recharges when you are in the proximity of your strike team.</p>",
+			"3": "<p>Create your own, unique character and customize their physical appearance, voice, and origin. Choose your class to determine which unique traits and skill sets they will make use of in battle. Will you be a seasoned veteran of the Imperial army, a snarky outsider, or a fiery zealot? The choice is yours.</p>",
+			"4": "<p>Step into the violent, dystopian world of Warhammer 40,000. From boiling hot industrial factories to the decaying water maintenance zone afflicted by constant acid rainfall - Tertium Hive is a hard and unforgiving place even at the best of times. Your role is to serve the zealous Inquisition by embarking on missions to exterminate the threats lurking in the depths of the hive city, or die trying.</p>",
+			"5": "<p>Adapt to the erratic whims of Chaos with conditions- mutators that add a spontaneous challenge to your mission. Your team must learn to adjust, adopt new tactics and change up their loadouts to face these ruthless challenges.</p>"
 		},
 		"screenshots_ld": {
 			"1": "darktide/ld/1_600x338.jpg",
