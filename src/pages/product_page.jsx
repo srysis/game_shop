@@ -56,22 +56,42 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 		addToCartFunction(item);
 	}
 
+	function constructDescription() {
+		let description_strings = Object.values(product.desc);
+		let description_container = document.querySelector("div.product_description")
+		let final_string = "";
+
+		for (let description_string of description_strings) {
+			final_string += description_string;
+		}
+
+		description_container.innerHTML = final_string
+	}
+
 	return(
-		<div id="product_page">
+		<div id="product_page" onLoad={constructDescription}>
 			<div className="product_details">
 				<div className="box_art">
 					<img src={`media/images/box_art/${product.box_art}`} alt={`${product.name} box art`} />
 				</div>
 				<div className="info_and_options">
 					<h2>{product.name}</h2>
+					<span>{Object.values(product.tags).map((tag, index) => <span key={index}>{tag}</span>)}</span>
 					<p>{product.short_desc}</p>
 					<div className="buy_container">
 						<p className="price">{product.price}</p>
 						{ !is_duplicate && <button type="button" className="buy" onClick={ () => { onAddHandler(product); } } >Add to Cart</button> }
 						{ is_duplicate && <button type="button" className="is_in_cart" disabled >In the cart</button> }
 					</div>
-					
 				</div>
+			</div>
+
+			<div id="description_wrapper">
+				<div className="description_title">
+					<h2>About the game:</h2>
+					<hr />
+				</div>
+				<div className="product_description"></div>
 			</div>
 
 			<ProductScreenshots 
