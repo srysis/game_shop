@@ -18,3 +18,19 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+/* scrollbar width */
+::-webkit-scrollbar {
+  	width: 5px;
+  	background: #000;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+  	background: #aaa;
+
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  	background: #777;
+}
