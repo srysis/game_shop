@@ -49,7 +49,7 @@ function ScreenshotOverlay( {image_list, image, image_index, toggleFullscreenFun
 			<button id="prev_image" onClick={() => switchToPreviousImage()} >&lt;</button> 
 			<img className="image_fullscreen" src={`media/images/screenshots/${image}`} alt="" />
 			<button id="next_image" onClick={() => switchToNextImage()} >&gt;</button>
-			<button id="close_button" ><img src={cross} onClick={() => { toggleFullscreenFunction(false); console.log('toggle off'); } } /></button>
+			<button id="close_button" ><img src={cross} onClick={() => { toggleFullscreenFunction(false) } } /></button>
 		</div>
 	)
 }

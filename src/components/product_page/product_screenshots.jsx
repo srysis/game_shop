@@ -158,7 +158,6 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 											toggleFullscreenFunction(true); 
 											setCurrentImageFunction(image);  
 											setCurrentImageIndexFunction(found_index);
-											console.log('toggle on'); 
 										} 
 									} 
 								/>
