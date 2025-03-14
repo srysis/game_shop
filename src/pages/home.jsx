@@ -5,7 +5,7 @@ import useTitle from "../hooks/useTitle.jsx"
 import Catalog from "../components/catalog/catalog.jsx"
 import Filters from "../components/filters/filters.jsx"
 
-import "../style/home.scss"
+import "../style/home/home.scss"
 
 function Home() {
 	useTitle("Games Shop")

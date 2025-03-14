@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "../../style/catalog/filters.scss"
+import "../../style/home/filters.scss"
 
 function Filters({setFiltersFunction, removeFilterFunction}) {
 	function onChangeHandler(checkbox, value) {

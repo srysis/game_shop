@@ -2,7 +2,7 @@ import React from 'react';
 
 import products from "../../files/products.json"
 
-import "../../style/catalog/catalog.scss"
+import "../../style/home/catalog.scss"
 
 import grid_icon from "../../files/grid-view.png"
 import list_icon from "../../files/list-view.png"

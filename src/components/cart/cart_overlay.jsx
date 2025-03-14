@@ -3,6 +3,8 @@ import { Link } from "react-router";
 
 import CartOverlayProduct from "./cart_overlay_product.jsx"
 
+import "../../style/cart/cart_overlay.scss"
+
 function CartOverlay( {cart_content, setCartActiveFunction} ) {
 
 	if (cart_content.length > 0) {

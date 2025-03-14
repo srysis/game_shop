@@ -8,8 +8,7 @@ import products from "../files/products.json"
 import ProductScreenshots from "../components/product_page/product_screenshots.jsx"
 import ScreenshotOverlay from "../components/product_page/screenshot_overlay.jsx"
 
-
-import "../style/catalog/product/product_page.scss"
+import "../style/product/product_page.scss"
 
 function ProductPage({addToCartFunction, isDuplicate}) {
 	const { id } = useParams();
@@ -65,7 +64,7 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 			final_string += description_string;
 		}
 
-		description_container.innerHTML = final_string
+		description_container.innerHTML = final_string;
 	}
 
 	return(
