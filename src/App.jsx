@@ -26,10 +26,6 @@ function App() {
 
 	const [cart_content, setCartContent] = React.useState(products_from_session_storage);
 
-	const [was_added, setAdded] = React.useState(false);
-	const [was_removed, setRemoved] = React.useState(false);
-
-
 	// instead of adding every single object from 'products' file
 	// we will store their IDs into a 'session storage' and retrieve them as required
 	React.useEffect(() => {
@@ -38,7 +34,23 @@ function App() {
 		cart_content.map(item => IDs.push(item.id));
 
 		window.sessionStorage.setItem('cart_data', JSON.stringify(IDs));
-	}, [cart_content])
+	}, [cart_content]);
+
+
+	const [was_added, setAdded] = React.useState(false);
+	const [was_removed, setRemoved] = React.useState(false);
+
+	const initial_device_type = window.innerWidth < 500 ? "mobile" : "desktop";
+
+	const [device_type, setDeviceType] = React.useState(initial_device_type);
+
+	window.addEventListener("resize", (event) => {
+		if (window.innerWidth > 500) {
+			setDeviceType("desktop");
+		} else {
+			setDeviceType("mobile");
+		}
+	})
 
 	function showMessage(type) {
 		// reset states to clear all previous messages
@@ -95,7 +107,7 @@ function App() {
 		<Router>
 			<Routes>
 				<Route element={<Layout was_added={was_added} was_removed={was_removed} cart_content={cart_content} />} >
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<Home device_type={device_type} />} />
 					<Route path="/product/:id" element={<ProductPage addToCartFunction={addToCart} isDuplicate={canBeAddedToCart} />} />
 					<Route path="/cart" element={<Cart products_in_cart={cart_content} removeFunction={removeFromCart} />} />
 				</Route>
