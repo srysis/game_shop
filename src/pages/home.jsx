@@ -2,13 +2,14 @@ import React from 'react';
 
 import useTitle from "../hooks/useTitle.jsx"
 
-import Catalog from "../components/catalog/catalog.jsx"
 import Filters from "../components/filters/filters.jsx"
+import Catalog from "../components/catalog/catalog.jsx"
 
 import "../style/home/home.scss"
+import "../style/home/mobile/home.scss"
 
-function Home() {
-	useTitle("Games Shop")
+function Home({device_type}) {
+	useTitle("Games Shop");
 
 	const [filters, setFilters] = React.useState([]);
 
@@ -28,7 +29,7 @@ function Home() {
 
 	return(
 		<div id="home">
-			<Filters setFiltersFunction={setFiltersFunction} removeFilterFunction={removeFilter} />
+			<Filters device_type={device_type} setFiltersFunction={setFiltersFunction} removeFilterFunction={removeFilter}/>
 			<Catalog filters={filters} />
 		</div>
 	)
