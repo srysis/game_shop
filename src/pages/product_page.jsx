@@ -9,8 +9,9 @@ import ProductScreenshots from "../components/product_page/product_screenshots.j
 import ScreenshotOverlay from "../components/product_page/screenshot_overlay.jsx"
 
 import "../style/product/product_page.scss"
+import "../style/product/mobile/product_page.scss"
 
-function ProductPage({addToCartFunction, isDuplicate}) {
+function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 	const { id } = useParams();
 
 	const product = products[id - 1];
@@ -75,7 +76,7 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 				</div>
 				<div className="info_and_options">
 					<h2>{product.name}</h2>
-					<span>{Object.values(product.tags).map((tag, index) => <span key={index}>{tag}</span>)}</span>
+					<div className="tags_container">{Object.values(product.tags).map((tag, index) => <span key={index}>{tag}</span>)}</div>
 					<p>{product.short_desc}</p>
 					<div className="buy_container">
 						<p className="price">{product.price}</p>
@@ -94,6 +95,7 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 			</div>
 
 			<ProductScreenshots 
+				device_type={device_type}
 				image_list={product.screenshots_ld}
 				toggleFullscreenFunction={setFullscreenState}
 				setCurrentImageFunction={setCurrentImageState}
@@ -102,6 +104,7 @@ function ProductPage({addToCartFunction, isDuplicate}) {
 
 			{is_fullscreen && 
 				<ScreenshotOverlay 
+					device_type={device_type}
 					image_list={product.screenshots_hd} 
 					image={current_image} 
 					image_index={current_image_index}
