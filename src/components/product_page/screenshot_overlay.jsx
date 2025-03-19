@@ -2,7 +2,7 @@ import React from 'react';
 
 import cross from "../../files/cross.svg"
 
-function ScreenshotOverlay( {image_list, image, image_index, toggleFullscreenFunction} ) {
+function ScreenshotOverlay( {device_type, image_list, image, image_index, toggleFullscreenFunction} ) {
 	const image_paths = Object.values(image_list);
 
 	const [current_image_index, setCurrentImageIndex] = React.useState(image_index);
@@ -26,8 +26,6 @@ function ScreenshotOverlay( {image_list, image, image_index, toggleFullscreenFun
 		}
 
 		setCurrentImageIndex(temp_index)
-
-		console.log('left');
 	}
 
 	function switchToNextImage() {
@@ -40,18 +38,31 @@ function ScreenshotOverlay( {image_list, image, image_index, toggleFullscreenFun
 		}
 
 		setCurrentImageIndex(temp_index);
-
-		console.log('right');
 	}
 
-	return(
-		<div id="image_fullscreen_overlay_container">
-			<button id="prev_image" onClick={() => switchToPreviousImage()} >&lt;</button> 
-			<img className="image_fullscreen" src={`media/images/screenshots/${image}`} alt="" />
-			<button id="next_image" onClick={() => switchToNextImage()} >&gt;</button>
-			<button id="close_button" ><img src={cross} onClick={() => { toggleFullscreenFunction(false) } } /></button>
-		</div>
-	)
+	if (device_type === "desktop") {
+		return(
+			<div id="image_fullscreen_overlay_container">
+				<button type="button" id="prev_image" onClick={() => switchToPreviousImage()} >&lt;</button> 
+				<img className="image_fullscreen" src={`media/images/screenshots/${image}`} alt="" />
+				<button type="button" id="next_image" onClick={() => switchToNextImage()} >&gt;</button>
+				<button type="button" id="close_button" ><img src={cross} onClick={() => { toggleFullscreenFunction(false) } } /></button>
+			</div>
+		)
+	}
+
+	if (device_type === "mobile") {
+		return(
+			<div id="image_fullscreen_overlay_container">
+				<img className="image_fullscreen" src={`media/images/screenshots/${image}`} alt="" />
+				<div>
+					<button type="button" id="prev_image" onClick={() => switchToPreviousImage()} >&lt;</button> 
+					<button type="button" id="next_image" onClick={() => switchToNextImage()} >&gt;</button>
+				</div>
+				<button type="button" id="close_button" ><img src={cross} onClick={() => { toggleFullscreenFunction(false) } } /></button>
+			</div>
+		)
+	}
 }
 
 export default ScreenshotOverlay;
