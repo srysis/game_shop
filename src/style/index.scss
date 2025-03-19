@@ -15,6 +15,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+main {
+	margin: 40px 5%;
+}
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -33,4 +37,10 @@ code {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   	background: #777;
+}
+
+@media screen and (max-width: 500px) {
+	main {
+		margin: 15px 1%;
+	}
 }
