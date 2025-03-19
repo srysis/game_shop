@@ -1,23 +1,4 @@
-/*div#cart_overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 3;
-	background-color: rgba(0, 0, 0, 0.9);
-
-	div.cart {
-		width: 50%;
-		margin: 23vw auto;
-		border-radius: 10px;
-		padding: 15px 5%;
-		background-color: #fff;
-	}
-}*/
-
 div#cart {
-	margin: 40px 5%;
 	border: 2px solid #bbb;
 	border-radius: 10px;
 	padding: 20px 3vw;
@@ -51,7 +32,10 @@ div#cart {
 			}
 
 			div.box_art > img {
-				width: 100px;
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
 			}
 
 			div.product_info {
