@@ -9,8 +9,9 @@ import SearchResults from "./search/search_results.jsx"
 import CartOverlay from "./cart/cart_overlay.jsx"
 
 import "../style/layout/header.scss"
+import "../style/layout/mobile/header.scss"
 
-function Header({ cart_content }) {
+function Header({ device_type, cart_content }) {
 	const [search_queue, setSearchQueue] = React.useState("");
 	const [is_searching, setSearching] = React.useState(false);
 
@@ -53,29 +54,57 @@ function Header({ cart_content }) {
 		}
 	}
 
-	return (
-		<header>
-			{is_searching &&
-				<div id="search_overlay" onClick={() => setSearchingFunction(false)} ></div>
-			}
-			{is_cart_active &&
-				<div id="cart_overlay" onClick={() => setCartActiveFunction(false)} ></div>
-			}
-			<div id="logo_container">
-				<h1 id="logo"><Link to="/">Game Shop</Link></h1>
-			</div>
-			<div id="search_container">
-				<SearchBar setSearchQueueFunction={setSearchQueueFunction} setSearchingFunction={setSearchingFunction} />
-				{(is_searching && search_queue !== "") &&
-					<SearchResults setSearchingFunction={setSearchingFunction} search_queue={search_queue.toLowerCase()} />
+	if (device_type === "desktop") {
+		return (
+			<header>
+				{is_searching &&
+					<div id="search_overlay" onClick={() => setSearchingFunction(false)} ></div>
 				}
-			</div>
-			<div id="cart_container">
-				<button type="button" id="open_cart_overlay" onClick={() => {setCartActiveFunction(true)}}><img src={cart_icon} alt="Go to cart" className="cart_icon" /></button>
+				{is_cart_active &&
+					<div id="cart_overlay" onClick={() => setCartActiveFunction(false)} ></div>
+				}
+				<div id="logo_container">
+					<h1 id="logo"><Link to="/">Game Shop</Link></h1>
+				</div>
+				<div id="search_container">
+					<SearchBar setSearchQueueFunction={setSearchQueueFunction} setSearchingFunction={setSearchingFunction} />
+					{(is_searching && search_queue !== "") &&
+						<SearchResults setSearchingFunction={setSearchingFunction} search_queue={search_queue.toLowerCase()} />
+					}
+				</div>
+				<div id="cart_container">
+					<button type="button" id="open_cart_overlay" onClick={() => {setCartActiveFunction(true)}}><img src={cart_icon} alt="Go to cart" className="cart_icon" /></button>
+					{is_cart_active && <CartOverlay cart_content={cart_content} setCartActiveFunction={setCartActiveFunction} />}
+				</div>
+			</header>
+		)
+	}
+
+	if (device_type === "mobile") {
+		return (
+			<header>
+				{is_searching &&
+					<div id="search_overlay" onClick={() => setSearchingFunction(false)} ></div>
+				}
+				{is_cart_active &&
+					<div id="cart_overlay" onClick={() => setCartActiveFunction(false)} ></div>
+				}
 				{is_cart_active && <CartOverlay cart_content={cart_content} setCartActiveFunction={setCartActiveFunction} />}
-			</div>
-		</header>
-	);
+				<div id="logo_container">
+					<h1 id="logo"><Link to="/">Game Shop</Link></h1>
+				</div>
+				<div id="cart_container">
+					<button type="button" id="open_cart_overlay" onClick={() => {setCartActiveFunction(true)}}><img src={cart_icon} alt="Go to cart" className="cart_icon" /></button>
+				</div>
+				<div id="search_container">
+					<SearchBar setSearchQueueFunction={setSearchQueueFunction} setSearchingFunction={setSearchingFunction} />
+					{(is_searching && search_queue !== "") &&
+						<SearchResults setSearchingFunction={setSearchingFunction} search_queue={search_queue.toLowerCase()} />
+					}
+				</div>
+			</header>
+		)
+	}
 }
 
 export default Header;
