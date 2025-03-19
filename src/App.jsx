@@ -106,9 +106,9 @@ function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route element={<Layout was_added={was_added} was_removed={was_removed} cart_content={cart_content} />} >
+				<Route element={<Layout device_type={device_type} was_added={was_added} was_removed={was_removed} cart_content={cart_content} />} >
 					<Route path="/" element={<Home device_type={device_type} />} />
-					<Route path="/product/:id" element={<ProductPage addToCartFunction={addToCart} isDuplicate={canBeAddedToCart} />} />
+					<Route path="/product/:id" element={<ProductPage device_type={device_type} addToCartFunction={addToCart} isDuplicate={canBeAddedToCart} />} />
 					<Route path="/cart" element={<Cart products_in_cart={cart_content} removeFunction={removeFromCart} />} />
 				</Route>
 			</Routes>
