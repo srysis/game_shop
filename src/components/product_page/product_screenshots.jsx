@@ -5,7 +5,7 @@ import Screenshot from "./screenshot.jsx"
 
 // !! STARTING INDEX IS CONSIDERED AS 1 IN THIS COMPONENT
 
-function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentImageFunction, setCurrentImageIndexFunction} ) {
+function ProductScreenshots( {device_type, image_list, toggleFullscreenFunction, setCurrentImageFunction, setCurrentImageIndexFunction} ) {
 	// a state that is used to force a component re-render
 	// for some reason React doesn't call a re-render after state change, so this workaround was implemented
 	const [, forceUpdate] = React.useReducer(x => x + 1, 0);
@@ -17,9 +17,6 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 	// modifying a copy would also change the original array, hence why it is required to make a clone and not a copy
 	let cloned_image_array = structuredClone(image_paths);
 
-	// remove all elements for new array after a certain index (3, in this case)
-	cloned_image_array.length = 3;
-
 	// 'current_images' array will store paths to images that are or will be rendered;
 	// it's elements will change after every call of 'goToLeft()' or 'goToRight()' functions;
 	// initially, it stores first 3 images of 'image_list', so that only they are shown on a page
@@ -30,6 +27,16 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 	const [image_index_to_left, setImageIndexToLeft] = React.useState(1);
 	const [image_index_to_right, setImageIndexToRight] = React.useState(cloned_image_array.length)
 
+	// set the max amount of images to render depending on the device type
+	// 1 for mobile and 3 for desktop version respectively
+	React.useEffect(() => {
+		if (device_type === "desktop") cloned_image_array.length = 3;
+		if (device_type === "mobile") cloned_image_array.length = 1;
+
+		setCurrentImages(cloned_image_array);
+		setImageIndexToLeft(1);
+		setImageIndexToRight(cloned_image_array.length);
+	}, [device_type]);
 
 	// IMPORTANT NOTE: it is possible to trigger 'useEffect' hook on prop change...
 	// due to how React handles states(?), 'current_images' were not updating on prop change
@@ -55,7 +62,6 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 		let next_image_index_to_left = image_index_to_left;
 		let next_image_index_to_right = image_index_to_right;
 
-		// subtract 1 from each index value
 		next_image_index_to_left--;
 		next_image_index_to_right--;
 
@@ -95,7 +101,6 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 		let next_image_index_to_left = image_index_to_left;
 		let next_image_index_to_right = image_index_to_right;
 
-		// add 1 from each index value
 		next_image_index_to_left++;
 		next_image_index_to_right++;
 
@@ -143,9 +148,10 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 		return found_index;
 	}
 
-	return(
-		<div className="product_screenshots" >
-			<div className="left_button" onClick={ () => { goToLeft(); } } >&lt;</div>
+	if (device_type === "desktop") {
+		return (
+			<div className="product_screenshots" >
+				<button type="button" className="left_button" onClick={ () => { goToLeft(); } } >&lt;</button>
 				{current_images.map((image, index) => 
 					{
 						let found_index = setDataIndex(image);
@@ -163,9 +169,38 @@ function ProductScreenshots( {image_list, toggleFullscreenFunction, setCurrentIm
 								/>
 					}
 				)}
-			<div className="right_button" onClick={ () => { goToRight(); } } >&gt;</div>
-		</div>
-	)
+				<button type="button" className="right_button" onClick={ () => { goToRight(); } } >&gt;</button>
+			</div>
+		)
+	}
+
+	if (device_type === "mobile") {
+		return (
+			<div className="product_screenshots" >
+				{current_images.map((image, index) => 
+					{
+						let found_index = setDataIndex(image);
+
+						return <Screenshot 
+									key={index + 1} 
+									image_src={image} 
+									data_index={found_index}
+									onClickHandler={ () => { 
+											toggleFullscreenFunction(true); 
+											setCurrentImageFunction(image);  
+											setCurrentImageIndexFunction(found_index);
+										} 
+									} 
+								/>
+					}
+				)}
+				<div className="buttons_container">
+					<button type="button" className="left_button" onClick={ () => { goToLeft(); } } >&lt;</button>
+					<button type="button" className="right_button" onClick={ () => { goToRight(); } } >&gt;</button>
+				</div>
+			</div>
+		)
+	}
 }
 
 export default ProductScreenshots;
