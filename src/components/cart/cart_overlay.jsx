@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import CartOverlayProduct from "./cart_overlay_product.jsx"
 
 import "../../style/cart/cart_overlay.scss"
+import "../../style/cart/mobile/cart_overlay.scss"
 
 function CartOverlay( {cart_content, setCartActiveFunction} ) {
 
