@@ -1,0 +1,27 @@
+@media screen and (max-width: 500px) {
+	div#cart_overlay_content {
+		left: 2.5vw;
+		top: 20vh;
+		width: 95vw;
+		padding: 5px 2vw;
+		font-size: 0.9em;
+		
+		div.cart_overlay_product {
+			div.link_container {
+				div.box_art {
+					margin-right: 2%;
+				}
+
+				div.product_info {
+					width: 80%;
+				}
+			}
+		}
+
+		div#go_to_cart {
+			margin-left: 58vw;
+			padding: 10px 4vw;
+			font-size: 0.8em;
+		}
+	}
+}

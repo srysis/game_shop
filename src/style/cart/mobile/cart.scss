@@ -1,0 +1,47 @@
+@media screen and (max-width: 500px) {
+	div#cart {
+		padding: 20px 2vw;
+		font-size: 0.9em;
+
+		h1 {
+			font-size: 1.8em;
+		}
+
+		div.cart_product {
+			margin: 15px 0;
+			padding: 10px 3%;
+
+			div.link_container {
+				div.box_art {
+					width: 35%;
+
+					img {
+						max-width: 95%;
+						max-height: 95%;
+					}
+				}
+
+				div.product_info {
+					width: 100%;
+					font-size: 1em;
+
+					h2 {
+						margin-bottom: 3px;
+					}
+
+					p {
+						margin-top: 3px;
+					}
+				}
+
+				div.remove_from_cart_container {
+					button.remove_from_cart {
+						img {
+							width: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
