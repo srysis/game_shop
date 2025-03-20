@@ -13,7 +13,7 @@ div#cart {
 		margin: 30px 0;
 		border: 2px solid #ccc;
 		border-radius: 5px;
-		padding: 30px 3%;
+		padding: 20px 2%;
 		box-shadow: 0px 0px 15px #ccc;
 		background-color: #fff;
 
@@ -31,17 +31,20 @@ div#cart {
 				z-index: 4;
 			}
 
-			div.box_art > img {
-				width: auto;
-				height: auto;
-				max-width: 100%;
-				max-height: 100%;
+			div.box_art {
+				width: 9%;
+
+				img {
+					width: auto;
+					height: auto;
+					max-width: 100%;
+					max-height: 100%;
+				}
 			}
 
 			div.product_info {
-				width: 100%;
+				width: 90%;
 				padding-left: 1vw;
-
 				font-size: 1.2em;
 
 				h2 {
@@ -61,6 +64,8 @@ div#cart {
 			}
 
 			div.remove_from_cart_container {
+				width: 3%;
+
 				button.remove_from_cart {
 					position: relative;
 					z-index: 6;

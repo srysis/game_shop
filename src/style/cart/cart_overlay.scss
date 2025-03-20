@@ -73,10 +73,11 @@ div#cart_overlay_content {
 		margin-left: 70%;
 		border: 3px solid #ccc;
 		border-radius: 5px;
-		padding: 5px 10px;
 		box-shadow: 0 0 10px #ccc;
 
 		a {
+			display: inline-block;
+			padding: 5px 10px;
 			text-decoration: none;
 			font-size: 1.5em;
 			font-weight: bold;
