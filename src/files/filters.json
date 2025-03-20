@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+		"tag": "Stealth"
+	},
+	{
+		"id": "2",
+		"tag": "Action"
+	},
+	{
+		"id": "3",
+		"tag": "Immersive Sim"
+	},
+	{
+		"id": "4",
+		"tag": "Shooter"
+	},
+	{
+		"id": "5",
+		"tag": "PvE"
+	},
+	{
+		"id": "6",
+		"tag": "Horde Shooter"
+	}
+]
