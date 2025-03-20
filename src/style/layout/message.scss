@@ -1,6 +1,6 @@
 div.message {
 	width: 25vw;
-	position: absolute;
+	position: fixed;
 	z-index: 4;
 	top: 100px;
 	right: 0.5vw;
@@ -14,7 +14,6 @@ div.message {
 	color: white;
 	animation: fadeIn 0.5s, 0.5s fadeOut 4.6s;
 	
-
 	div.icon_container {
 		width: 17%;
 
