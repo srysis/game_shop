@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link } from "react-router";
 
-function ProductList( {item} ) {
+function ProductList({ product: {id, box_art, name, tags, price} }) {
 	return(
 		<div className="product">
 			<div className="overlay">
-				<Link to={`/product/${item.id}`} className="details" />
+				<Link to={`/product/${id}`} className="details" />
 			</div>
 			<div className="box_art">
-				<img src={`media/images/box_art/${item.box_art}`} alt={`${item.name} box art`} />
+				<img src={`media/images/box_art/${box_art}`} alt={`${name} box art`} />
 			</div>
 			<div className="title">
-				<h2>{item.name}</h2>
-				<span>{Object.values(item.tags).map((tag, index) => <span key={index}>{tag}</span>)}</span>
+				<h2>{name}</h2>
+				<span>{Object.values(tags).map((tag, index) => <span key={index}>{tag}</span>)}</span>
 			</div>
 			<div className="info">
-				<div className="price"><p>{item.price}</p></div>
+				<div className="price"><p>{price}</p></div>
 			</div>
 		</div>
 	)
