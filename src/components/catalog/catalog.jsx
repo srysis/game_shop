@@ -68,12 +68,12 @@ function Catalog({filters}) {
 			</div>
 			{view_mode === "grid" && 
 				<div id="products" className="grid" >
-					{final_products.map((product) => <ProductGrid key={product.id} item={product} />)}
+					{final_products.map((product) => <ProductGrid key={product.id} product={product} />)}
 				</div>
 			}
 			{view_mode === "list" &&
 				<div id="products" className="list" >
-					{final_products.map((product) => <ProductList key={product.id} item={product} />)}
+					{final_products.map((product) => <ProductList key={product.id} product={product} />)}
 				</div>
 			}
 		</div>
