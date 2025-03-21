@@ -16,6 +16,8 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 
 	const product = products[id - 1];
 
+	const { box_art, name, short_desc, tags, screenshots_ld, screenshots_hd } = product;
+
 	useTitle(`Buy ${product.name} on Games Shop`);
 
 	const [is_fullscreen, toggleFullscreen] = React.useState(false);
@@ -72,12 +74,12 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 		<div id="product_page" onLoad={constructDescription}>
 			<div className="product_details">
 				<div className="box_art">
-					<img src={`media/images/box_art/${product.box_art}`} alt={`${product.name} box art`} />
+					<img src={`media/images/box_art/${box_art}`} alt={`${name} box art`} />
 				</div>
 				<div className="info_and_options">
-					<h2>{product.name}</h2>
-					<div className="tags_container">{Object.values(product.tags).map((tag, index) => <span key={index}>{tag}</span>)}</div>
-					<p>{product.short_desc}</p>
+					<h2>{name}</h2>
+					<div className="tags_container">{Object.values(tags).map((tag, index) => <span key={index}>{tag}</span>)}</div>
+					<p>{short_desc}</p>
 					<div className="buy_container">
 						<p className="price">{product.price}</p>
 						{ !is_duplicate && <button type="button" className="buy" onClick={ () => { onAddHandler(product); } } >Add to Cart</button> }
@@ -96,7 +98,7 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 
 			<ProductScreenshots 
 				device_type={device_type}
-				image_list={product.screenshots_ld}
+				image_list={screenshots_ld}
 				toggleFullscreenFunction={setFullscreenState}
 				setCurrentImageFunction={setCurrentImageState}
 				setCurrentImageIndexFunction={setCurrentImageIndexState}
@@ -105,7 +107,7 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 			{is_fullscreen && 
 				<ScreenshotOverlay 
 					device_type={device_type}
-					image_list={product.screenshots_hd} 
+					image_list={screenshots_hd} 
 					image={current_image} 
 					image_index={current_image_index}
 					toggleFullscreenFunction={setFullscreenState} 
