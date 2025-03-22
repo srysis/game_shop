@@ -85,6 +85,11 @@ function App() {
 		setRemoved(false);
 	}
 
+	function resetMessages() {
+		setAdded(false);
+		setRemoved(false);
+	}
+
 	function canBeAddedToCart(product) {
 		return (cart_content.includes(product));
 	}
@@ -106,7 +111,7 @@ function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route element={<Layout device_type={device_type} was_added={was_added} was_removed={was_removed} cart_content={cart_content} />} >
+				<Route element={<Layout device_type={device_type} was_added={was_added} was_removed={was_removed} cart_content={cart_content} resetMessages={resetMessages} />} >
 					<Route path="/" element={<Home device_type={device_type} />} />
 					<Route path="/product/:id" element={<ProductPage device_type={device_type} addToCartFunction={addToCart} isDuplicate={canBeAddedToCart} />} />
 					<Route path="/cart" element={<Cart products_in_cart={cart_content} removeFunction={removeFromCart} />} />
