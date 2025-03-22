@@ -7,7 +7,7 @@ import SuccessAddMessage from "./SuccessMessage.jsx"
 import SuccessRemoveMessage from "./SuccessMessage.jsx"
 
 
-function Layout( {device_type, was_added, was_removed, cart_content} ) {
+function Layout( {device_type, was_added, was_removed, cart_content, resetMessages} ) {
 	let message_type = "";
 
 	if (was_added) { 
@@ -18,8 +18,8 @@ function Layout( {device_type, was_added, was_removed, cart_content} ) {
 
 	return (
 		<>
-			{ was_added && <SuccessAddMessage type={message_type} /> }
-			{ was_removed && <SuccessRemoveMessage type={message_type} /> }
+			{ was_added && <SuccessAddMessage type={message_type} onClickHandler={resetMessages} /> }
+			{ was_removed && <SuccessRemoveMessage type={message_type} onClickHandler={resetMessages} /> }
 			<Header device_type={device_type} cart_content={cart_content} />
 			<main>
 				<Outlet />
