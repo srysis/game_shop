@@ -12,6 +12,7 @@ div.message {
 	box-shadow: 0px 0px 20px #aaa;
 	background-color: #00A912;
 	color: white;
+	cursor: pointer;
 	animation: fadeIn 0.5s, 0.5s fadeOut 4.6s;
 	
 	div.icon_container {
@@ -43,6 +44,10 @@ div.message {
 			font-size: 1.1em;
 		}
 	}
+}
+
+div.message:hover {
+	background-color: #009B12;
 }
 
 @keyframes fadeIn {
