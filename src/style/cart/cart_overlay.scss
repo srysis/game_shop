@@ -67,6 +67,10 @@ div#cart_overlay_content {
 		background-color: #ddd;
 	}
 
+	div.cart_overlay_product:active {
+		background-color: #bbb;
+	}
+
 	div#go_to_cart {
 		display: inline-block;
 		margin: 15px 0;
@@ -87,5 +91,9 @@ div#cart_overlay_content {
 
 	div#go_to_cart:hover {
 		background-color: #bbb;
+	}
+
+	div#go_to_cart:active {
+		background-color: #999;
 	}
 }

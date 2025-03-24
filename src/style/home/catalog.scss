@@ -112,6 +112,9 @@ div#catalog {
 			transform: scale(1.05);
 		}
 
+		div.product:active {
+			background-color: #ccc;
+		}
 	}
 
 	div#products.list {
@@ -176,6 +179,10 @@ div#catalog {
 
 		div.product:hover {
 			background-color: #eee;
+		}
+
+		div.product:active {
+			background-color: #ccc;
 		}
 	}
 }

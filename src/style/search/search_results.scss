@@ -47,6 +47,10 @@ div#search_results {
 	div.search_result_product:hover {
 		background-color: #ddd;
 	}
+
+	div.search_result_product:active {
+		background-color: #bbb;
+	}
 }
 
 @keyframes fade_in {

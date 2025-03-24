@@ -81,7 +81,11 @@ div#cart {
 				}
 
 				button.remove_from_cart:hover {
-					background-color: #aaa;
+					background-color: #bbb;
+				}
+
+				button.remove_from_cart:active {
+					background-color: #999;
 				}
 			}
 		}
@@ -90,6 +94,10 @@ div#cart {
 
 	div.cart_product:hover {
 		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	div.cart_product:active {
+		background-color: rgba(0, 0, 0, 0.2);
 	}
 }
 
