@@ -4,9 +4,14 @@ div#filters {
 	height: auto;
 	border: 2px solid #bbb;
 	border-radius: 10px;
-	padding: 30px 3%;
+	padding: 20px 2%;
 	box-shadow: 0 0 30px #bbb;
 	background-color: #fff;
+
+	h1 {
+		margin-bottom: 20px;
+		border-bottom: 2px solid black;
+	}
 
 	form {
 		label.checkbox_container {
@@ -57,6 +62,10 @@ div#filters {
 
 	label.checkbox_container:hover input ~ span.checkmark {
 		background-color: #ccc;
+	}
+
+	label.checkbox_container:active input ~ span.checkmark {
+		background-color: #aaa;
 	}
 
 	label.checkbox_container input:checked ~ span.checkmark:after {
