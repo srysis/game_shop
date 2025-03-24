@@ -28,6 +28,7 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction}) {
 					<hr />
 				</>
 			}
+			<h1>Filters</h1>
 			<form id="filters_form">
 				{filters.map((filter) => <Filter key={filter.id} filter={filter.tag} onChangeHandler={onChangeHandler} />)}
 			</form>
