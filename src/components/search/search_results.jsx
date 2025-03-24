@@ -8,11 +8,11 @@ import "../../style/search/search_results.scss"
 import "../../style/search/mobile/search_results.scss"
 
 function SearchResults({setSearchingFunction, search_queue}) {
-	let search_results = products.filter(item => item.name.toLowerCase().includes(search_queue))
+	let search_results = products.filter(item => item.name.toLowerCase().includes(search_queue)).slice(0, 4);
 
 	return (
 		<div id="search_results">
-			{search_results.slice(0, 4).map((item, index) => <SearchResultProduct key={item.id} product={item} setSearchingFunction={setSearchingFunction} />)}
+			{search_results.map((item, index) => <SearchResultProduct key={item.id} product={item} setSearchingFunction={setSearchingFunction} />)}
 		</div>
 	);
 }
