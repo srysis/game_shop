@@ -72,12 +72,13 @@
 		"id": 3,
 		"name": "Warhammer 40,000: Darktide",
 		"box_art": "darktide.jpg",
-		"price": "$30.00",
+		"price": "$40.00",
 		"tags": {
 			"1": "Action",
 			"2": "Shooter",
 			"3": "PvE",
-			"4": "Horde Shooter"
+			"4": "Co-op",
+			"5": "Horde Shooter"
 		},
 		"short_desc": "Take back the city of Tertium from hordes of bloodthirsty foes in this intense and brutal action shooter. Warhammer 40,000: Darktide is the new co-op focused experience from the award-winning team behind the Vermintide series. As Tertium falls, Rejects Will Rise.",
 		"desc": {
@@ -104,6 +105,77 @@
 			"5": "darktide/hd/5_1920x1080.jpg",
 			"6": "darktide/hd/6_1920x1080.jpg",
 			"7": "darktide/hd/7_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 4,
+		"name": "Warhammer: Vermintide 2",
+		"box_art": "vermintide_2.jpg",
+		"price": "$30.00",
+		"tags": {
+			"1": "Action",
+			"2": "PvE",
+			"3": "Co-op",
+			"4": "Horde Shooter",
+			"5": "Dark Fantasy"
+		},
+		"short_desc": "The critically acclaimed Vermintide 2 is a visually stunning and groundbreaking melee action game pushing the boundaries of the first person co-op genre. Join the fight now!",
+		"desc": {
+			"1": "<p>Warhammer: Vermintide 2 is a 4-player co-op action game set in the Warhammer Fantasy Battles world. Sequel to the critically acclaimed Vermintide, Vermintide 2 is the latest installment in a franchise best known for its intense and bloody first-person melee combat.</p>",
+			"2": "<p>Our five heroes have returned to take on an even greater threat than before – the combined forces of a ruinous Chaos army and the swarming Skaven horde. The only thing standing between utter defeat and victory is you and your allies. If you fall - so too will the Empire.</p>"
+		},
+		"screenshots_ld": {
+			"1": "vermintide_2/ld/1_600x338.jpg",
+			"2": "vermintide_2/ld/2_600x338.jpg",
+			"3": "vermintide_2/ld/3_600x338.jpg",
+			"4": "vermintide_2/ld/4_600x338.jpg",
+			"5": "vermintide_2/ld/5_600x338.jpg",
+			"6": "vermintide_2/ld/6_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "vermintide_2/hd/1_1920x1080.jpg",
+			"2": "vermintide_2/hd/2_1920x1080.jpg",
+			"3": "vermintide_2/hd/3_1920x1080.jpg",
+			"4": "vermintide_2/hd/4_1920x1080.jpg",
+			"5": "vermintide_2/hd/5_1920x1080.jpg",
+			"6": "vermintide_2/hd/6_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 5,
+		"name": "Fallout 76",
+		"box_art": "fallout76.jpg",
+		"price": "$40.00",
+		"tags": {
+			"1": "MMORPG",
+			"2": "Open World",
+			"3": "Post-apocalyptic"
+		},
+		"short_desc": "Bethesda Game Studios welcome you to Fallout 76. Twenty-five years after the bombs fall, you and your fellow Vault Dwellers emerge into post-nuclear America. Explore a vast wasteland in this open-world multiplayer addition to the Fallout story.",
+		"desc": {
+			"1": "<p>Bethesda Game Studios, the award-winning creators of Skyrim and Fallout 4, welcome you to Fallout 76. Twenty-five years after the bombs fell, you and your fellow Vault Dwellers—chosen from the nation’s best and brightest – emerge into post-nuclear America on Reclamation Day, 2102. Play solo or join together as you explore, quest, build, and triumph against the wasteland’s greatest threats. Explore a vast wasteland, devastated by nuclear war, in this open-world multiplayer addition to the Fallout story. Experience the largest, most dynamic world ever created in the legendary Fallout universe.</p>",
+			"2": "<p>Experience Fallout 76 like never before, turn your character into a Ghoul and unlock access to a suite of unique perk cards. Take radiation damage to increase the Glow meter and restore health, then spend Glow for all-new abilities. Take chems to keep the Feral meter at bay or become a ferocious melee berserker. Use disguises to stay friendly with the Brotherhood of Steel and other inhabitants.</p>",
+			"3": "<p>Uncover the secrets of West Virginia by playing through an immersive main quest, starting from the moment you leave Vault 76. Befriend or betray new neighbors who have come to rebuild, and experience Appalachia through the eyes of its residents.</p>",
+			"4": "<p>Progress through each season and unlock free rewards like consumables, C.A.M.P. items and more by completing limited-time challenges.</p>",
+			"5": "<p>Create your character with the S.P.E.C.I.A.L system and forge your own path and reputation in a new and untamed wasteland with hundreds of locations. Whether you journey alone or with friends, a new and unique Fallout adventure awaits.</p>",
+			"6": "<p>The story lives and breathes through the world of Fallout 76, which brings to life six distinct West Virginia regions. From the forests of Appalachia to the noxious crimson expanses of the Cranberry Bog, each area offers its own risks and rewards.</p>",
+			"7": "<p>Use the all-new Construction and Assembly Mobile Platform (C.A.M.P.) to build and craft anywhere in the world. Your C.A.M.P. will provide much-needed shelter, supplies, and safety. You can even set up shop to trade goods with other survivors.</p>"
+		},
+		"screenshots_ld": {
+			"1": "fallout76/ld/1_600x338.jpg",
+			"2": "fallout76/ld/2_600x338.jpg",
+			"3": "fallout76/ld/3_600x338.jpg",
+			"4": "fallout76/ld/4_600x338.jpg",
+			"5": "fallout76/ld/5_600x338.jpg",
+			"6": "fallout76/ld/6_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "fallout76/hd/1_1920x1080.jpg",
+			"2": "fallout76/hd/2_1920x1080.jpg",
+			"3": "fallout76/hd/3_1920x1080.jpg",
+			"4": "fallout76/hd/4_1920x1080.jpg",
+			"5": "fallout76/hd/5_1920x1080.jpg",
+			"6": "fallout76/hd/6_1920x1080.jpg"
 		}
 	}
 ]
