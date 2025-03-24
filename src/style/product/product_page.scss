@@ -80,6 +80,10 @@ div#product_page {
 					background-color: #ccc;
 				}
 
+				button.buy:active {
+					background-color: #aaa;
+				}
+
 				button.is_in_cart {
 					background-color: #ddd;
 					cursor: not-allowed;
@@ -138,6 +142,10 @@ div#product_page {
 			background-color: #ddd;
 		}
 
+		button.left_button:active, button.right_button:active {
+			background-color: #bbb;
+		}
+
 		div.image_container {
 			margin: 0 1%;
 
@@ -153,8 +161,14 @@ div#product_page {
 
 		div.image_container:hover {
 			img {
+				transform: scale(1.15);
+				box-shadow: 0 0 10px #000;
+			}
+		}
+
+		div.image_container:active {
+			img {
 				transform: scale(1.1);
-				box-shadow: 0 0 10px #aaa;
 			}
 		}
 	}
@@ -169,7 +183,7 @@ div#product_page {
 		bottom: 0;
 		z-index: 6;
 		background: rgba(0, 0, 0, 0.98);
-		animation: scale_container 0.2s;
+		animation: scale_container 0.1s;
 
 		img.image_fullscreen {
 			display: block;
@@ -181,7 +195,7 @@ div#product_page {
 			border-radius: 5px;
 			padding: 15px;
 			background-color: black;
-			animation: scale_image 0.2s;
+			animation: scale_image 0.3s;
 		}
 
 		#prev_image, #next_image, #close_button {
@@ -214,6 +228,10 @@ div#product_page {
 		}
 
 		#prev_image:hover, #next_image:hover, #close_button:hover {
+			background-color: #444;
+		}
+
+		#prev_image:active, #next_image:active, #close_button:active {
 			background-color: #333;
 		}
 		
