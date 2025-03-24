@@ -1,26 +1,46 @@
 [
 	{
-		"id": "1",
-		"tag": "Stealth"
-	},
-	{
-		"id": "2",
+		"id": 1,
 		"tag": "Action"
 	},
 	{
-		"id": "3",
+		"id": 2,
+		"tag": "Co-op"
+	},
+	{
+		"id": 3,
+		"tag": "Dark Fantasy"
+	},
+	{
+		"id": 4,
+		"tag": "Horde Shooter"
+	},
+	{
+		"id": 5,
 		"tag": "Immersive Sim"
 	},
 	{
-		"id": "4",
-		"tag": "Shooter"
+		"id": 6,
+		"tag": "MMORPG"
 	},
 	{
-		"id": "5",
+		"id": 7,
+		"tag": "Open World"
+	},
+	{
+		"id": 8,
+		"tag": "Post-apocalyptic"
+	},
+	{
+		"id": 9,
 		"tag": "PvE"
 	},
 	{
-		"id": "6",
-		"tag": "Horde Shooter"
+		"id": 10,
+		"tag": "Shooter"
+	},
+	{
+		"id": 11,
+		"tag": "Stealth"
 	}
 ]
