@@ -18,7 +18,7 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 
 	const { box_art, name, short_desc, tags, screenshots_ld, screenshots_hd } = product;
 
-	useTitle(`Buy ${product.name} on Games Shop`);
+	useTitle(`Buy ${name} on Games Shop`);
 
 	const [is_fullscreen, toggleFullscreen] = React.useState(false);
 	const [current_image, setCurrentImage] = React.useState();
