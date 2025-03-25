@@ -13,9 +13,20 @@ import ProductList from "./product_list.jsx"
 
 function Catalog({filters}) {
 	const [view_mode, setViewMode] = React.useState("list");
+	const [catalog_size, setCatalogSize] = React.useState(2);
+
+	const [has_reached_end, setHasReachedEnd] = React.useState(false);
+
+	React.useEffect(() => {
+		if (catalog_size === products.length) setHasReachedEnd(true);
+	}, []);
 
 	// used as a limit for the 'for' loop
 	let filters_size = filters.length;
+
+	// only certain amount of products will be used for filtering and rendering
+	// the size will increase with the state's value increasing as well, which happens on user input
+	let init_products = products.slice(0, catalog_size);
 
 	// 'filtered_products' is a temporary array, used in the 'for' loop
 	let filtered_products = [];
@@ -31,7 +42,7 @@ function Catalog({filters}) {
 	// but if there are filters being passed back to this component, do the code in the 'else' block
 	// NOTE: it is probably not the most efficient way to handle such things, but it will pass for now
 	if (filters_size === 0) {
-		final_products = products;
+		final_products = init_products;
 	} else {
 
 		// in this loop we will iterate through every filter that were passed to this component
@@ -58,12 +69,43 @@ function Catalog({filters}) {
 		final_products = [...temp_set];
 	}
 
+	function increaseCatalogSize() {
+		let init_size = catalog_size;
+
+		let new_size = init_size + 2;
+
+		if (new_size > products.length) {
+			setHasReachedEnd(true);
+			new_size = products.length; 
+		}
+
+		setCatalogSize(new_size);
+	}
+
+	function onClickHandler(event) {
+		if (event.currentTarget.classList.contains("grid")) {
+			document.querySelector("div#list_view > button").classList.remove("pressed");
+			event.currentTarget.classList.add("pressed");
+		} else if (event.currentTarget.classList.contains("list")) {
+			document.querySelector("div#grid_view > button").classList.remove("pressed");
+			event.currentTarget.classList.add("pressed");
+		}
+	}
+
 	return(
 		<div id="catalog">
 			<div id="view_container">
 				<div id="view">
-					<div id="grid_view"><button type="button" onClick={() => {setViewMode("grid")}}><img src={grid_icon} alt=""/></button></div>
-					<div id="list_view"><button type="button" onClick={() => {setViewMode("list")}}><img src={list_icon} alt=""/></button></div>
+					<div id="grid_view">
+						<button type="button" className="grid" onClick={(event) => {setViewMode("grid"); onClickHandler(event)}}>
+							<img src={grid_icon} alt=""/>
+						</button>
+					</div>
+					<div id="list_view">
+						<button type="button" className="list pressed" onClick={(event) => {setViewMode("list"); onClickHandler(event)}}>
+							<img src={list_icon} alt=""/>
+						</button>
+					</div>
 				</div>
 			</div>
 			{view_mode === "grid" && 
@@ -76,6 +118,7 @@ function Catalog({filters}) {
 					{final_products.map((product) => <ProductList key={product.id} product={product} />)}
 				</div>
 			}
+			{(!has_reached_end && filters_size === 0) && <button type="button" id="load_more" onClick={() => { increaseCatalogSize() } } >Load more</button> }
 		</div>
 	)
 }
