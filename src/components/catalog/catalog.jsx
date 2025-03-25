@@ -74,7 +74,7 @@ function Catalog({filters}) {
 
 		let new_size = init_size + 2;
 
-		if (new_size > products.length) {
+		if (new_size >= products.length) {
 			setHasReachedEnd(true);
 			new_size = products.length; 
 		}
