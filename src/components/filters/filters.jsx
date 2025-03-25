@@ -28,7 +28,7 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction}) {
 					<hr />
 				</>
 			}
-			<h2>Filters</h2>
+			{ device_type === "desktop" && <h2>Filters</h2> }
 			<form id="filters_form">
 				{filters.map((filter) => <Filter key={filter.id} filter={filter.tag} onChangeHandler={onChangeHandler} />)}
 			</form>
