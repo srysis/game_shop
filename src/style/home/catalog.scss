@@ -25,7 +25,19 @@ div#catalog {
 					cursor: pointer;
 				}
 
+				button.pressed {
+					background-color: #ccc;
+				}
+
+				button.pressed:hover {
+					background-color: #ccc;
+				}
+
 				button:hover {
+					background-color: #ddd;
+				}
+
+				button:active {
 					background-color: #ccc;
 				}
 			}
@@ -184,5 +196,24 @@ div#catalog {
 		div.product:active {
 			background-color: #ccc;
 		}
+	}
+
+	button#load_more {
+		width: 100%;
+		border: 2px solid #ccc;
+		padding: 10px 0;
+		box-shadow: 0px 0px 10px #ddd;
+		background-color: #fff;
+		font-size: 1.2em;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	button#load_more:hover {
+		background-color: #eee;
+	}
+
+	button#load_more:active {
+		background-color: #ddd;
 	}
 }
