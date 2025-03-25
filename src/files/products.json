@@ -177,5 +177,265 @@
 			"5": "fallout76/hd/5_1920x1080.jpg",
 			"6": "fallout76/hd/6_1920x1080.jpg"
 		}
+	},
+	{
+		"id": 6,
+		"name": "The Elder Scrolls V: Skyrim Special Edition",
+		"box_art": "skyrim.jpg",
+		"price": "$40.00",
+		"tags": {
+			"1": "RPG",
+			"2": "Open World",
+			"3": "Fantasy"
+		},
+		"short_desc": "Winner of more than 200 Game of the Year Awards, The Elder Scrolls V: Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features.",
+		"desc": {
+			"1": "<p>The next chapter in the highly anticipated Elder Scrolls saga arrives from the makers of the 2006 and 2008 Games of the Year, Bethesda Game Studios. Skyrim reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.</p>",
+			"2": "<p>Play any type of character you can imagine, and do whatever you want; the legendary freedom of choice, storytelling, and adventure of The Elder Scrolls is realized like never before.</p>",
+			"3": "<p>Skyrim’s new game engine brings to life a complete virtual world with rolling clouds, rugged mountains, bustling cities, lush fields, and ancient dungeons.</p>",
+			"4": "<p>Choose from hundreds of weapons, spells, and abilities. The new character system allows you to play any way you want and define yourself through your actions.</p>",
+			"5": "<p>Battle ancient dragons like you’ve never seen. As Dragonborn, learn their secrets and harness their power for yourself.</p>"
+		},
+		"screenshots_ld": {
+			"1": "skyrim/ld/1_600x338.jpg",
+			"2": "skyrim/ld/2_600x338.jpg",
+			"3": "skyrim/ld/3_600x338.jpg",
+			"4": "skyrim/ld/4_600x338.jpg",
+			"5": "skyrim/ld/5_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "skyrim/hd/1_1920x1080.jpg",
+			"2": "skyrim/hd/2_1920x1080.jpg",
+			"3": "skyrim/hd/3_1920x1080.jpg",
+			"4": "skyrim/hd/4_1920x1080.jpg",
+			"5": "skyrim/hd/5_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 7,
+		"name": "Don't Starve Together",
+		"box_art": "dst.jpg",
+		"price": "$15.00",
+		"tags": {
+			"1": "Survival",
+			"2": "Co-op",
+			"3": "Singleplayer"
+		},
+		"short_desc": "Fight, Farm, Build and Explore Together in the standalone multiplayer expansion to the uncompromising wilderness survival game, Don't Starve.",
+		"desc": {
+			"1": "<p>Enter a strange and unexplored world full of odd creatures, hidden dangers, and ancient secrets. Gather resources to craft items and build structures that match your survival style. Play your way as you unravel the mysteries of 'The Constant'.</p>",
+			"2": "<p>Cooperate with your friends in a private game, or find new friends online. Work with other players to survive the harsh environment, or strike out on your own.</p>",
+			"3": "<p>Do whatever it takes, but most importantly, Don't Starve.</p>"
+		},
+		"screenshots_ld": {
+			"1": "dst/ld/1_600x338.jpg",
+			"2": "dst/ld/2_600x338.jpg",
+			"3": "dst/ld/3_600x338.jpg",
+			"4": "dst/ld/4_600x338.jpg",
+			"5": "dst/ld/5_600x338.jpg",
+			"6": "dst/ld/6_600x338.jpg",
+			"7": "dst/ld/7_600x338.jpg",
+			"8": "dst/ld/8_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "dst/hd/1_1920x1080.jpg",
+			"2": "dst/hd/2_1920x1080.jpg",
+			"3": "dst/hd/3_1920x1080.jpg",
+			"4": "dst/hd/4_1920x1080.jpg",
+			"5": "dst/hd/5_1920x1080.jpg",
+			"6": "dst/hd/6_1920x1080.jpg",
+			"7": "dst/hd/7_1920x1080.jpg",
+			"8": "dst/hd/8_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 8,
+		"name": "Left 4 Dead 2",
+		"box_art": "l4d2.jpg",
+		"price": "$10.00",
+		"tags": {
+			"1": "FPS",
+			"2": "Zombies",
+			"3": "Singleplayer",
+			"4": "Co-op"
+		},
+		"short_desc": "Set in the zombie apocalypse, Left 4 Dead 2 (L4D2) is the highly anticipated sequel to the award-winning Left 4 Dead, the #1 co-op game of 2008. This co-operative action horror FPS takes you and your friends through the cities, swamps and cemeteries of the Deep South, from Savannah to New Orleans across five expansive campaigns.",
+		"desc": {
+			"1": "<p>You'll play as one of four new survivors armed with a wide and devastating array of classic and upgraded weapons. In addition to firearms, you'll also get a chance to take out some aggression on infected with a variety of carnage-creating melee weapons, from chainsaws to axes and even the deadly frying pan. You'll be putting these weapons to the test against (or playing as in Versus) three horrific and formidable new Special Infected. You'll also encounter five new 'uncommon' common infected, including the terrifying Mudmen.</p>",
+			"2": "<p>Helping to take L4D's frantic, action-packed gameplay to the next level is AI Director 2.0. This improved Director has the ability to procedurally change the weather you'll fight through and the pathways you'll take, in addition to tailoring the enemy population, effects, and sounds to match your performance. L4D2 promises a satisfying and uniquely challenging experience every time the game is played, custom-fitted to your style of play.</p>"
+		},
+		"screenshots_ld": {
+			"1": "l4d2/ld/1_600x338.jpg",
+			"2": "l4d2/ld/2_600x338.jpg",
+			"3": "l4d2/ld/3_600x338.jpg",
+			"4": "l4d2/ld/4_600x338.jpg",
+			"5": "l4d2/ld/5_600x338.jpg",
+			"6": "l4d2/ld/6_600x338.jpg",
+			"7": "l4d2/ld/7_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "l4d2/hd/1_1920x1080.jpg",
+			"2": "l4d2/hd/2_1920x1080.jpg",
+			"3": "l4d2/hd/3_1920x1080.jpg",
+			"4": "l4d2/hd/4_1920x1080.jpg",
+			"5": "l4d2/hd/5_1920x1080.jpg",
+			"6": "l4d2/hd/6_1920x1080.jpg",
+			"7": "l4d2/hd/7_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 9,
+		"name": "Dead by Daylight",
+		"box_art": "dbd.jpg",
+		"price": "$20.00",
+		"tags": {
+			"1": "Horror",
+			"2": "Multiplayer",
+			"3": "Team-Based",
+			"4": "Asymetrical"
+		},
+		"short_desc": "Trapped forever in a realm of eldritch evil where even death is not an escape, four determined Survivors face a bloodthirsty Killer in a vicious game of nerve and wits. Pick a side and step into a world of tension and terror with horror gaming's best asymmetrical multiplayer.",
+		"desc": {
+			"1": "<p>Trapped forever in a realm of eldritch evil where even death is not an escape, four determined Survivors face a bloodthirsty Killer in a vicious game of nerve and wits. Pick a side and step into a world of tension and terror with horror gaming's best asymmetrical multiplayer.</p>",
+			"2": "<p>Survivors play in third-person and have the advantage of better situational awareness. The Killer plays in first-person and is more focused on their prey.</p>",
+			"3": "<p>The Survivors' goal in each encounter is to escape the Killing Ground without getting caught by the Killer - something that sounds easier than it is, especially when the environment changes every time you play.</p>",
+			"4": "<p><b>Survive Together… Or Not</b> - Survivors can either cooperate with the others or be selfish. Your chance of survival will vary depending on whether you work together as a team or if you go at it alone. Will you be able to outwit the Killer and escape their Killing Ground?</p>",
+			"5": "<p><b>Where Am I?</b> - Each level is procedurally generated, so you’ll never know what to expect. Random spawn points mean you will never feel safe as the world and its danger change every time you play.</p>",
+			"6": "<p><b>A Feast for Killers</b> - Dead by Daylight draws from all corners of the horror world. As a Killer you can play as anything from a powerful Slasher to terrifying paranormal entities. Familiarize yourself with your Killing Grounds and master each Killer’s unique power to be able to hunt, catch and sacrifice your victims.</p>",
+			"7": "<p><b>Deeper and Deeper</b> - Each Killer and Survivor has their own deep progression system and plenty of unlockables that can be customized to fit your own personal strategy. Experience, skills and understanding of the environment are key to being able to hunt or outwit the Killer.</p>",
+			"8": "<p><b>Real People, Real Fear</b> - The procedural levels and real human reactions to pure horror makes each game session an unexpected scenario. You will never be able to tell how it’s going to turn out. Ambience, music, and chilling environments combine into a terrifying experience. With enough time, you might even discover what’s hiding in the fog.</p>"
+		},
+		"screenshots_ld": {
+			"1": "dbd/ld/1_600x338.jpg",
+			"2": "dbd/ld/2_600x338.jpg",
+			"3": "dbd/ld/3_600x338.jpg",
+			"4": "dbd/ld/4_600x338.jpg",
+			"5": "dbd/ld/5_600x338.jpg",
+			"6": "dbd/ld/6_600x338.jpg",
+			"7": "dbd/ld/7_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "dbd/hd/1_1920x1080.jpg",
+			"2": "dbd/hd/2_1920x1080.jpg",
+			"3": "dbd/hd/3_1920x1080.jpg",
+			"4": "dbd/hd/4_1920x1080.jpg",
+			"5": "dbd/hd/5_1920x1080.jpg",
+			"6": "dbd/hd/6_1920x1080.jpg",
+			"7": "dbd/hd/7_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 10,
+		"name": "Garry's Mod",
+		"box_art": "gmod.jpg",
+		"price": "$10.00",
+		"tags": {
+			"1": "Sandbox",
+			"2": "Multiplayer",
+			"3": "Singleplayer",
+			"4": "FPS"
+		},
+		"short_desc": "Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We give you the tools and leave you to play.",
+		"desc": {
+			"1": "<p>Garry's Mod is a physics sandbox. There aren't any predefined aims or goals. We give you the tools and leave you to play.</p>",
+			"2": "<p>You spawn objects and weld them together to create your own contraptions - whether that's a car, a rocket, a catapult or something that doesn't have a name yet - that's up to you. You can do it offline, or join the thousands of players who play online each day.</p>",
+			"3": "<p>If you're not too great at construction - don't worry! You can place a variety of characters in silly positions. But if you want to do more, we have the means.</p>",
+			"4": "<p>The Garry's Mod community is a tremendous source of content and has added hundreds of unique modes to the game. In Trouble In Terrorist Town, you can be a detective solving an online murder as criminals attempt to cover up their homicides. Be a ball, a plant, a chair, or anything else in Prop Hunt's elaborate, shape-shifting game of Hide & Seek. Elevator: Source is gaming's first elevator thrill ride, delivering players to airlocks and kitten dance parties.</p>"
+		},
+		"screenshots_ld": {
+			"1": "gmod/ld/1_600x338.jpg",
+			"2": "gmod/ld/2_600x338.jpg",
+			"3": "gmod/ld/3_600x338.jpg",
+			"4": "gmod/ld/4_600x338.jpg",
+			"5": "gmod/ld/5_600x338.jpg",
+			"6": "gmod/ld/6_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "gmod/hd/1_1920x1080.jpg",
+			"2": "gmod/hd/2_1920x1080.jpg",
+			"3": "gmod/hd/3_1920x1080.jpg",
+			"4": "gmod/hd/4_1920x1080.jpg",
+			"5": "gmod/hd/5_1920x1080.jpg",
+			"6": "gmod/hd/6_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 11,
+		"name": "Painkiller: Black Edition",
+		"box_art": "painkiller.jpg",
+		"price": "$10.00",
+		"tags": {
+			"1": "FPS",
+			"2": "Action",
+			"3": "Singleplayer",
+			"4": "Gothic",
+			"5": "Horror"
+		},
+		"short_desc": "Painkiller Black Edition includes the expansion pack Battle Out of Hell, featuring 10 additional single-player levels and many new villains.",
+		"desc": {
+			"1": "<p>Gothic Story, Frantic Gameplay. Painkiller is a first-person horror shooter, designed to satisfy a gamer's hunger for intense, fast-paced action. It's an adrenaline addict's nightmare, where hellish monsters swarm in seemingly endless mobs.</p>",
+			"2": "<p>Graphically, Painkiller is unmatched. The proprietary PAIN Engine puts out an unbelievably high polygon count, while adding increased texture quality and the latest lighting and shadowing techniques, including soft shadows, DOT3 bump mapping, water reflections, glass simulation, volumetric light and fog, and more. Plug in the Havok 2.0 physics engine, and you get a realistic environment in a totally fantastical setting.</p>",
+			"3": "<p>Stranded in a place between Heaven and Hell, your time of judgment is at hand. The Underworld is on the verge of unholy war, and you are but a pawn in the infernal battle. As you fight for your purification, the truths behind the deceptions are revealed.</p>"
+		},
+		"screenshots_ld": {
+			"1": "painkiller/ld/1_600x338.jpg",
+			"2": "painkiller/ld/2_600x338.jpg",
+			"3": "painkiller/ld/3_600x338.jpg",
+			"4": "painkiller/ld/4_600x338.jpg",
+			"5": "painkiller/ld/5_600x338.jpg",
+			"6": "painkiller/ld/6_600x338.jpg",
+			"7": "painkiller/ld/7_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "painkiller/hd/1_1920x1080.jpg",
+			"2": "painkiller/hd/2_1920x1080.jpg",
+			"3": "painkiller/hd/3_1920x1080.jpg",
+			"4": "painkiller/hd/4_1920x1080.jpg",
+			"5": "painkiller/hd/5_1920x1080.jpg",
+			"6": "painkiller/hd/6_1920x1080.jpg",
+			"7": "painkiller/hd/7_1920x1080.jpg"
+		}
+	},
+	{
+		"id": 12,
+		"name": "Fallout 4",
+		"box_art": "fallout4.jpg",
+		"price": "$20.00",
+		"tags": {
+			"1": "Singleplayer",
+			"2": "RPG",
+			"3": "Action",
+			"4": "Post-apocalyptic",
+			"5": "Open World"
+		},
+		"short_desc": "Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.",
+		"desc": {
+			"1": "<p>As the sole survivor of Vault 111, you enter a world destroyed by nuclear war. Every second is a fight for survival, and every choice is yours. Only you can rebuild and determine the fate of the Wasteland. Welcome home.</p>",
+			"2": "<p>Do whatever you want in a massive open world with hundreds of locations, characters, and quests. Join multiple factions vying for power or go it alone, the choices are all yours.</p>",
+			"3": "<p>Be whoever you want with the S.P.E.C.I.A.L. character system. From a Power Armored soldier to the charismatic smooth talker, you can choose from hundreds of Perks and develop your own playstyle.</p>",
+			"4": "<p>An all-new next generation graphics and lighting engine brings to life the world of Fallout like never before. From the blasted forests of the Commonwealth to the ruins of Boston, every location is packed with dynamic detail.</p>",
+			"5": "<p>Intense first or third person combat can also be slowed down with the new dynamic Vault-Tec Assisted Targeting System (V.A.T.S) that lets you choose your attacks and enjoy cinematic carnage.</p>",
+			"6": "<p>Collect, upgrade, and build thousands of items in the most advanced crafting system ever. Weapons, armor, chemicals, and food are just the beginning - you can even build and manage entire settlements.</p>"
+		},
+		"screenshots_ld": {
+			"1": "fallout4/ld/1_600x338.jpg",
+			"2": "fallout4/ld/2_600x338.jpg",
+			"3": "fallout4/ld/3_600x338.jpg",
+			"4": "fallout4/ld/4_600x338.jpg",
+			"5": "fallout4/ld/5_600x338.jpg",
+			"6": "fallout4/ld/6_600x338.jpg",
+			"7": "fallout4/ld/7_600x338.jpg",
+			"8": "fallout4/ld/8_600x338.jpg"
+		},
+		"screenshots_hd": {
+			"1": "fallout4/hd/1_1920x1080.jpg",
+			"2": "fallout4/hd/2_1920x1080.jpg",
+			"3": "fallout4/hd/3_1920x1080.jpg",
+			"4": "fallout4/hd/4_1920x1080.jpg",
+			"5": "fallout4/hd/5_1920x1080.jpg",
+			"6": "fallout4/hd/6_1920x1080.jpg",
+			"7": "fallout4/hd/7_1920x1080.jpg",
+			"8": "fallout4/hd/8_1920x1080.jpg"
+		}
 	}
 ]
