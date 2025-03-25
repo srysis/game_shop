@@ -8,7 +8,7 @@ div#filters {
 	box-shadow: 0 0 30px #bbb;
 	background-color: #fff;
 
-	h1 {
+	h2 {
 		margin-bottom: 20px;
 		border-bottom: 2px solid black;
 	}
@@ -17,10 +17,10 @@ div#filters {
 		label.checkbox_container {
 			display: block;
 			position: relative;
-			padding-left: 30px;
+			padding-left: 25px;
 			margin-bottom: 15px;
 			cursor: pointer;
-			font-size: 20px;
+			font-size: 16px;
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
@@ -38,8 +38,8 @@ div#filters {
 				position: absolute;
 				top: 0;
 				left: 0;
-				height: 25px;
-				width: 25px;
+				height: 20px;
+				width: 20px;
 				background-color: #eee;
 			}
 
@@ -47,8 +47,8 @@ div#filters {
 				content: "";
 				position: absolute;
 				display: none;
-				left: 9px;
-				top: 5px;
+				left: 6px;
+				top: 2px;
 				width: 5px;
 				height: 10px;
 				border: solid white;
