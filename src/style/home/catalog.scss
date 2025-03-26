@@ -59,21 +59,22 @@ div#catalog {
 
 	div#products.grid {
 		display: flex;
+		flex-wrap: wrap;
 
 		div.product {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			width: 11vw;
+			width: 30%;
 			margin: 20px 0;
-			margin-right: 2vw;
+			margin-right: 5%;
 			border: 2px solid #ccc;
 			border-radius: 5px;
 			padding: 10px 1%;
 			box-shadow: 0 0 10px #ccc;
 			background-color: #fff;
 			cursor: pointer;
-			transition: transform 0.05s;
+			transition: transform 0.1s;
 
 			div.link_container {
 				position: relative;
@@ -100,8 +101,12 @@ div#catalog {
 				}
 
 				div.title {
+					display: flex;
+					flex-direction: column;
+
 					h2 {
 						margin: 10px 0;
+						font-size: 1.8em;
 						text-align: center;
 					}
 				}
@@ -110,13 +115,33 @@ div#catalog {
 			
 
 			div.info {
+				div.tags_container {
+					margin: 10px 0;
+					text-align: center;
+
+					span {
+						display: inline-block;
+						margin-bottom: 5px;
+						margin-right: 5px;
+						border: 1px solid #888;
+						border-radius: 5px;
+						padding: 1px 4px;
+						background-color: #eee;
+						font-size: 1em;
+					}
+				}
+
 				div.price {
 					p {
-						font-size: 1.4em;
+						font-size: 2em;
 						font-weight: bold;
 					}
 				}
 			}
+		}
+
+		div.product:nth-child(3n) {
+			margin-right: 0;
 		}
 
 		div.product:hover {
