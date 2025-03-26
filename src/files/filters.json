@@ -1,46 +1,34 @@
 [
 	{
-		"id": 1,
-		"tag": "Action"
-	},
-	{
-		"id": 2,
-		"tag": "Co-op"
-	},
-	{
-		"id": 3,
-		"tag": "Dark Fantasy"
-	},
-	{
-		"id": 4,
-		"tag": "Horde Shooter"
-	},
-	{
-		"id": 5,
-		"tag": "Immersive Sim"
-	},
-	{
-		"id": 6,
-		"tag": "MMORPG"
-	},
-	{
-		"id": 7,
-		"tag": "Open World"
-	},
-	{
-		"id": 8,
-		"tag": "Post-apocalyptic"
-	},
-	{
-		"id": 9,
-		"tag": "PvE"
-	},
-	{
-		"id": 10,
-		"tag": "Shooter"
-	},
-	{
-		"id": 11,
-		"tag": "Stealth"
+		"genre": {
+			"1": "Action",
+			"2": "FPS",
+			"3": "Stealth",
+			"4": "MMORPG",
+			"5": "RPG",
+			"6": "Sandbox",
+			"7": "Survival"
+		},
+		"player_count": {
+			"1": "Singleplayer",
+			"2": "Multiplayer",
+			"3": "Co-op"
+		},
+		"format": {
+			"1": "PvP",
+			"2": "PvE"
+		},
+		"setting": {
+			"1": "Post-apocalyptic",
+			"2": "Gothic",
+			"3": "Horror",
+			"4": "Fantasy",
+			"5": "Dark Fantasy"
+		},
+		"misc_tags": {
+			"1": "Immersive Sim",
+			"2": "Zombies",
+			"3": "Horde Shooter"
+		}
 	}
 ]
