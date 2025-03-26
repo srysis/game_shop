@@ -30,7 +30,36 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction}) {
 			}
 			{ device_type === "desktop" && <h2>Filters</h2> }
 			<form id="filters_form">
-				{filters.map((filter) => <Filter key={filter.id} filter={filter.tag} onChangeHandler={onChangeHandler} />)}
+				<div className="filters_container">
+					<h3>Genre</h3>
+					<div>
+						{Object.values(filters[0].genre).map((tag, index) => <Filter key={index + 1} filter={tag} onChangeHandler={onChangeHandler} /> )}
+					</div>
+				</div>
+				<div className="filters_container">
+					<h3>Player count</h3>
+					<div>
+						{Object.values(filters[0].player_count).map((tag, index) => <Filter key={index + 1} filter={tag} onChangeHandler={onChangeHandler} /> )}
+					</div>
+				</div>
+				<div className="filters_container">
+					<h3>Format</h3>
+					<div>
+						{Object.values(filters[0].format).map((tag, index) => <Filter key={index + 1} filter={tag} onChangeHandler={onChangeHandler} /> )}
+					</div>
+				</div>
+				<div className="filters_container">
+					<h3>Setting</h3>
+					<div>
+						{Object.values(filters[0].setting).map((tag, index) => <Filter key={index + 1} filter={tag} onChangeHandler={onChangeHandler} /> )}
+					</div>
+				</div>
+				<div className="filters_container">
+					<h3>Miscellaneous</h3>
+					<div>
+						{Object.values(filters[0].misc_tags).map((tag, index) => <Filter key={index + 1} filter={tag} onChangeHandler={onChangeHandler} /> )}
+					</div>
+				</div>
 			</form>
 		</div>
 	)
