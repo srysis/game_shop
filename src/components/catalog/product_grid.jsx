@@ -16,6 +16,7 @@ function ProductGrid({ product: {id, box_art, name, tags, price} }) {
 				</div>
 			</div>
 			<div className="info">
+				<div className="tags_container">{Object.values(tags).map((tag, index) => <span key={index}>{tag}</span>)}</div>
 				<div className="price"><p>{price}</p></div>
 			</div>
 		</div>
