@@ -9,14 +9,24 @@ div#filters {
 	background-color: #fff;
 
 	h2 {
-		margin-bottom: 20px;
 		border-bottom: 2px solid black;
 	}
 
 	form {
+		div.filters_container {
+			margin: 20px 0;
+
+			h3 {
+				margin-bottom: 10px;
+				cursor: default;
+			}
+		}
+		
+
 		label.checkbox_container {
-			display: block;
+			display: inline-block;
 			position: relative;
+			width: 8vw;
 			padding-left: 25px;
 			margin-bottom: 15px;
 			cursor: pointer;
