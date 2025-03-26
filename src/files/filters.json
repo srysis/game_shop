@@ -7,7 +7,8 @@
 			"4": "MMORPG",
 			"5": "RPG",
 			"6": "Sandbox",
-			"7": "Survival"
+			"7": "Survival",
+			"8": "Platformer"
 		},
 		"player_count": {
 			"1": "Singleplayer",
@@ -23,12 +24,14 @@
 			"2": "Gothic",
 			"3": "Horror",
 			"4": "Fantasy",
-			"5": "Dark Fantasy"
+			"5": "Dark Fantasy",
+			"6": "Sci-fi"
 		},
 		"misc_tags": {
 			"1": "Immersive Sim",
 			"2": "Zombies",
-			"3": "Horde Shooter"
+			"3": "Horde Shooter",
+			"4": "Story Rich"
 		}
 	}
 ]
