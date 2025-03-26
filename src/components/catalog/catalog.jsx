@@ -13,7 +13,7 @@ import ProductList from "./product_list.jsx"
 
 function Catalog({filters}) {
 	const [view_mode, setViewMode] = React.useState("list");
-	const [catalog_size, setCatalogSize] = React.useState(2);
+	const [catalog_size, setCatalogSize] = React.useState(3);
 
 	const [has_reached_end, setHasReachedEnd] = React.useState(false);
 
@@ -72,7 +72,7 @@ function Catalog({filters}) {
 	function increaseCatalogSize() {
 		let init_size = catalog_size;
 
-		let new_size = init_size + 2;
+		let new_size = init_size + 3;
 
 		if (new_size >= products.length) {
 			setHasReachedEnd(true);
