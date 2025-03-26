@@ -27,10 +27,13 @@
 
 				div.tags_container {
 					display: flex;
+					flex-wrap: wrap;
 					justify-content: center;
 					margin: 5px 0;
 
 					span {
+						display: inline-block;
+						margin-top: 10px;
 						font-size: 0.8em;
 					}
 					
