@@ -54,6 +54,14 @@ function Header({ device_type, cart_content }) {
 		}
 	}
 
+	function onClickHandler(event) {
+		// reset 'catalog_size' when going to the home page directly for better UX
+		window.sessionStorage.setItem('catalog_size', JSON.stringify(3));
+
+		// force refresh the page if already on this page to update 'catalog'
+		if(event.target.href === window.location.href) window.location.reload();
+	}
+
 	if (device_type === "desktop") {
 		return (
 			<header>
@@ -64,7 +72,7 @@ function Header({ device_type, cart_content }) {
 					<div id="cart_overlay" onClick={() => setCartActiveFunction(false)} ></div>
 				}
 				<div id="logo_container">
-					<h1 id="logo"><Link to="/">Game Shop</Link></h1>
+					<h1 id="logo"><Link to="" onClick={onClickHandler} >Game Shop</Link></h1>
 				</div>
 				<div id="search_container">
 					<SearchBar setSearchQueueFunction={setSearchQueueFunction} setSearchingFunction={setSearchingFunction} />
