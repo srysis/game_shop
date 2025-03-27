@@ -12,8 +12,35 @@ import ProductGrid from "./product_grid.jsx"
 import ProductList from "./product_list.jsx"
 
 function Catalog({filters}) {
+	
+
+	// !!! this does not work if the app has just been opened from the root URL
+	// it happens because the initial URL does not have the '#/' at the end of it
+	// hence why the check fails and 'scrolling' does not work
+	// only after clicking on the 'logo', '#/' appears at the end
+
+	window.addEventListener('hashchange', onHashChangeHandler);
+
+	function onHashChangeHandler(event) {
+		if (event.newURL.endsWith('#/')) {
+			console.log("back on home");
+
+			window.scrollTo(0, JSON.parse(window.sessionStorage.getItem('scroll_pos')));
+		}
+
+		if (event.oldURL.endsWith('#/')) {
+			window.scrollTo(0, 0);
+			window.sessionStorage.setItem('scroll_pos', JSON.stringify(0));
+		}
+	}
+
+	let saved_catalog_size = JSON.parse(window.sessionStorage.getItem('catalog_size'));
+
+	// initialize 'catalog_size' if session key has not been created yet
+	if (saved_catalog_size === null) saved_catalog_size = 3;
+
 	const [view_mode, setViewMode] = React.useState("list");
-	const [catalog_size, setCatalogSize] = React.useState(3);
+	const [catalog_size, setCatalogSize] = React.useState(saved_catalog_size);
 
 	const [has_reached_end, setHasReachedEnd] = React.useState(false);
 
@@ -82,7 +109,7 @@ function Catalog({filters}) {
 		setCatalogSize(new_size);
 	}
 
-	function onClickHandler(event) {
+	function onViewSwitchClickHandler(event) {
 		if (event.currentTarget.classList.contains("grid")) {
 			document.querySelector("div#list_view > button").classList.remove("pressed");
 			event.currentTarget.classList.add("pressed");
@@ -92,17 +119,26 @@ function Catalog({filters}) {
 		}
 	}
 
+	function onProductClickHandler(event) {
+		// store scroll position BEFORE scrolling to the top
+		window.sessionStorage.setItem('scroll_pos', JSON.stringify(window.scrollY));
+
+		window.scrollTo(0, 0);
+
+		window.sessionStorage.setItem('catalog_size', JSON.stringify(catalog_size));
+	}
+
 	return(
 		<div id="catalog">
 			<div id="view_container">
 				<div id="view">
 					<div id="grid_view">
-						<button type="button" className="grid" onClick={(event) => {setViewMode("grid"); onClickHandler(event)}}>
+						<button type="button" className="grid" onClick={(event) => {setViewMode("grid"); onViewSwitchClickHandler(event)}}>
 							<img src={grid_icon} alt=""/>
 						</button>
 					</div>
 					<div id="list_view">
-						<button type="button" className="list pressed" onClick={(event) => {setViewMode("list"); onClickHandler(event)}}>
+						<button type="button" className="list pressed" onClick={(event) => {setViewMode("list"); onViewSwitchClickHandler(event)}}>
 							<img src={list_icon} alt=""/>
 						</button>
 					</div>
@@ -110,12 +146,12 @@ function Catalog({filters}) {
 			</div>
 			{view_mode === "grid" && 
 				<div id="products" className="grid" >
-					{final_products.map((product) => <ProductGrid key={product.id} product={product} />)}
+					{final_products.map((product) => <ProductGrid key={product.id} product={product} onClickHandler={onProductClickHandler} />)}
 				</div>
 			}
 			{view_mode === "list" &&
 				<div id="products" className="list" >
-					{final_products.map((product) => <ProductList key={product.id} product={product} />)}
+					{final_products.map((product) => <ProductList key={product.id} product={product} onClickHandler={onProductClickHandler} />)}
 				</div>
 			}
 			{(!has_reached_end && filters_size === 0) && <button type="button" id="load_more" onClick={() => { increaseCatalogSize() } } >Load more</button> }
