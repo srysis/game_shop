@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from "react-router";
 
-function ProductList({ product: {id, box_art, name, tags, price} }) {
+function ProductList({ product: {id, box_art, name, tags, price}, onClickHandler }) {
 	return(
 		<div className="product">
 			<div className="overlay">
-				<Link to={`/product/${id}`} className="details" />
+				<Link to={`/product/${id}`} className="details" onClick={onClickHandler} />
 			</div>
 			<div className="box_art">
 				<img src={`media/images/box_art/${box_art}`} alt={`${name} box art`} />
