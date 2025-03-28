@@ -99,7 +99,7 @@ function Header({ device_type, cart_content }) {
 				}
 				{is_cart_active && <CartOverlay cart_content={cart_content} setCartActiveFunction={setCartActiveFunction} />}
 				<div id="logo_container">
-					<h1 id="logo"><Link to="/">Game Shop</Link></h1>
+					<h1 id="logo"><Link to="/" onClick={onClickHandler} >Game Shop</Link></h1>
 				</div>
 				<div id="cart_container">
 					<button type="button" id="open_cart_overlay" onClick={() => {setCartActiveFunction(true)}}><img src={cart_icon} alt="Go to cart" className="cart_icon" /></button>
