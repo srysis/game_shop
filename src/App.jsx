@@ -1,15 +1,19 @@
 import React from "react"
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import products from "./files/products.json"
 
 import Layout from "./components/Layout.jsx"
 
+import NotFoundPage from "./pages/not_found_page.jsx"
 import Home from "./pages/home.jsx"
 import ProductPage from "./pages/product_page.jsx"
 import Cart from "./pages/cart.jsx"
 
 function App() {
+	// important change that allows to manually handle scrolling on 'popstate' event
+	window.history.scrollRestoration = 'manual';
+
 	// attempt to retrieve data from 'sessionStorage', if it doesn't exist - initialize it with empty array, so the app can work properly
 	if (window.sessionStorage.getItem('cart_data') === null) window.sessionStorage.setItem('cart_data', JSON.stringify([]));
 
@@ -109,15 +113,16 @@ function App() {
 	}
 
 	return (
-		<Router>
+		<BrowserRouter>
 			<Routes>
 				<Route element={<Layout device_type={device_type} was_added={was_added} was_removed={was_removed} cart_content={cart_content} resetMessages={resetMessages} />} >
 					<Route path="/" element={<Home device_type={device_type} />} />
 					<Route path="/product/:id" element={<ProductPage device_type={device_type} addToCartFunction={addToCart} isDuplicate={canBeAddedToCart} />} />
 					<Route path="/cart" element={<Cart products_in_cart={cart_content} removeFunction={removeFromCart} />} />
 				</Route>
+				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
-		</Router>
+		</BrowserRouter>
 	);
 }
 
