@@ -12,7 +12,7 @@ function CartOverlayProduct({
 					<Link to={`/product/${id}`} onClick={() => { setCartActiveFunction(false) }} />
 				</div>
 				<div className="box_art">
-					<img src={`media/images/box_art/${box_art}`} alt={`${name} box art`} />
+					<img src={`/media/images/box_art/${box_art}`} alt={`${name} box art`} />
 				</div>
 				<div className="product_info">
 					<h2>{name}</h2>

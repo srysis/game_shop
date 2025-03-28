@@ -10,7 +10,7 @@ function ScreenshotOverlay( {device_type, image_list, image, image_index, toggle
 	React.useEffect(() => {
 		let requested_image = image_paths[current_image_index - 1];
 
-		let full_path_to_image = `media/images/screenshots/${requested_image}`;
+		let full_path_to_image = `/media/images/screenshots/${requested_image}`;
 		
 		let image_container = document.querySelector("img.image_fullscreen");
 		image_container.setAttribute("src", full_path_to_image);
@@ -44,7 +44,7 @@ function ScreenshotOverlay( {device_type, image_list, image, image_index, toggle
 		return(
 			<div id="image_fullscreen_overlay_container">
 				<button type="button" id="prev_image" onClick={() => switchToPreviousImage()} >&lt;</button> 
-				<img className="image_fullscreen" src={`media/images/screenshots/${image}`} alt="" />
+				<img className="image_fullscreen" src={`/media/images/screenshots/${image}`} alt="" />
 				<button type="button" id="next_image" onClick={() => switchToNextImage()} >&gt;</button>
 				<button type="button" id="close_button" ><img src={cross} onClick={() => { toggleFullscreenFunction(false) } } /></button>
 			</div>
@@ -54,7 +54,7 @@ function ScreenshotOverlay( {device_type, image_list, image, image_index, toggle
 	if (device_type === "mobile") {
 		return(
 			<div id="image_fullscreen_overlay_container">
-				<img className="image_fullscreen" src={`media/images/screenshots/${image}`} alt="" />
+				<img className="image_fullscreen" src={`/media/images/screenshots/${image}`} alt="" />
 				<div>
 					<button type="button" id="prev_image" onClick={() => switchToPreviousImage()} >&lt;</button> 
 					<button type="button" id="next_image" onClick={() => switchToNextImage()} >&gt;</button>

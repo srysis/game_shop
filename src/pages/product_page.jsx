@@ -74,7 +74,7 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 		<div id="product_page" onLoad={constructDescription}>
 			<div className="product_details">
 				<div className="box_art">
-					<img src={`media/images/box_art/${box_art}`} alt={`${name} box art`} />
+					<img src={`/media/images/box_art/${box_art}`} alt={`${name} box art`} />
 				</div>
 				<div className="info_and_options">
 					<h2>{name}</h2>
