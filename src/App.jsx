@@ -113,7 +113,7 @@ function App() {
 	}
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/">
 			<Routes>
 				<Route element={<Layout device_type={device_type} was_added={was_added} was_removed={was_removed} cart_content={cart_content} resetMessages={resetMessages} />} >
 					<Route path="/" element={<Home device_type={device_type} />} />
