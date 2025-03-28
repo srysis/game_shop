@@ -12,26 +12,10 @@ import ProductGrid from "./product_grid.jsx"
 import ProductList from "./product_list.jsx"
 
 function Catalog({filters}) {
-	
+	window.addEventListener('popstate', onPopStateHandler);
 
-	// !!! this does not work if the app has just been opened from the root URL
-	// it happens because the initial URL does not have the '#/' at the end of it
-	// hence why the check fails and 'scrolling' does not work
-	// only after clicking on the 'logo', '#/' appears at the end
-
-	window.addEventListener('hashchange', onHashChangeHandler);
-
-	function onHashChangeHandler(event) {
-		if (event.newURL.endsWith('#/')) {
-			console.log("back on home");
-
-			window.scrollTo(0, JSON.parse(window.sessionStorage.getItem('scroll_pos')));
-		}
-
-		if (event.oldURL.endsWith('#/')) {
-			window.scrollTo(0, 0);
-			window.sessionStorage.setItem('scroll_pos', JSON.stringify(0));
-		}
+	function onPopStateHandler(event) {
+		window.scrollTo(0, JSON.parse(window.sessionStorage.getItem('scroll_pos')));
 	}
 
 	let saved_catalog_size = JSON.parse(window.sessionStorage.getItem('catalog_size'));
