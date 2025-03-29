@@ -6,6 +6,10 @@ div#search_results {
 	background-color: #fff;
 	animation: 0.3s fade_in;
 
+	h2#empty_results {
+		padding: 10px 1%;
+	}
+
 	div.search_result_product {
 		position: relative;
 		padding: 10px 1%;
