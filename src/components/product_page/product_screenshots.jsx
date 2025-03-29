@@ -17,6 +17,11 @@ function ProductScreenshots( {device_type, image_list, toggleFullscreenFunction,
 	// modifying a copy would also change the original array, hence why it is required to make a clone and not a copy
 	let cloned_image_array = structuredClone(image_paths);
 
+	// set the max amount of images to render depending on the device type
+	// 1 for mobile and 3 for desktop version respectively
+	if (device_type === "desktop") cloned_image_array.length = 3;
+	if (device_type === "mobile") cloned_image_array.length = 1;
+
 	// 'current_images' array will store paths to images that are or will be rendered;
 	// it's elements will change after every call of 'goToLeft()' or 'goToRight()' functions;
 	// initially, it stores first 3 images of 'image_list', so that only they are shown on a page
@@ -27,8 +32,7 @@ function ProductScreenshots( {device_type, image_list, toggleFullscreenFunction,
 	const [image_index_to_left, setImageIndexToLeft] = React.useState(1);
 	const [image_index_to_right, setImageIndexToRight] = React.useState(cloned_image_array.length)
 
-	// set the max amount of images to render depending on the device type
-	// 1 for mobile and 3 for desktop version respectively
+	// in case of switching between viewports, change max amount of images to render depending on the device type
 	React.useEffect(() => {
 		if (device_type === "desktop") cloned_image_array.length = 3;
 		if (device_type === "mobile") cloned_image_array.length = 1;
