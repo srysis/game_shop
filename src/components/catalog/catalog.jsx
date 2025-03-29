@@ -21,7 +21,7 @@ function Catalog({filters}) {
 	let saved_catalog_size = JSON.parse(window.sessionStorage.getItem('catalog_size'));
 
 	// initialize 'catalog_size' if session key has not been created yet
-	if (saved_catalog_size === null) saved_catalog_size = 3;
+	if (saved_catalog_size === null) saved_catalog_size = 6;
 
 	const [view_mode, setViewMode] = React.useState("list");
 	const [catalog_size, setCatalogSize] = React.useState(saved_catalog_size);
@@ -83,7 +83,7 @@ function Catalog({filters}) {
 	function increaseCatalogSize() {
 		let init_size = catalog_size;
 
-		let new_size = init_size + 3;
+		let new_size = init_size + 4;
 
 		if (new_size >= products.length) {
 			setHasReachedEnd(true);
