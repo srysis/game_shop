@@ -140,6 +140,37 @@ function Catalog({filters}) {
 		window.sessionStorage.setItem('catalog_size', JSON.stringify(catalog_size));
 	}
 
+
+
+	// function that checks if given element is in the user's browser's viewport by X percent, where X is from 0 to 100
+	function isVisibleInViewport(element, percentage) {
+		let rect = element.getBoundingClientRect();
+		let windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+		return !(
+			Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-rect.height) * 100)) < percentage ||
+			Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentage
+		)
+	};
+
+	function loadMoreProducts() {
+		const button = document.querySelector("button#load_more");
+
+		if (button != null) {
+			if (isVisibleInViewport(button, 100)) {
+				console.log("visible");
+				button.click();
+			}
+		}
+	}
+
+	React.useEffect(() => {
+		if (!has_reached_end) window.addEventListener("scroll", loadMoreProducts);
+		if (has_reached_end) window.removeEventListener("scroll", loadMoreProducts);
+	}, [has_reached_end])
+	
+
+
 	return(
 		<div id="catalog">
 			<div id="view_container">
