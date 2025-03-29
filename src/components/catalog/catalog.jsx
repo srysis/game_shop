@@ -18,19 +18,39 @@ function Catalog({filters}) {
 		window.scrollTo(0, JSON.parse(window.sessionStorage.getItem('scroll_pos')));
 	}
 
+
+
 	let saved_catalog_size = JSON.parse(window.sessionStorage.getItem('catalog_size'));
 
 	// initialize 'catalog_size' if session key has not been created yet
 	if (saved_catalog_size === null) saved_catalog_size = 6;
 
-	const [view_mode, setViewMode] = React.useState("list");
 	const [catalog_size, setCatalogSize] = React.useState(saved_catalog_size);
+
+
+
+	let saved_view_mode = JSON.parse(window.sessionStorage.getItem('view_mode'));
+
+	// specify default view mode if session key has not been created yet
+	if (saved_view_mode === null) saved_view_mode = "list";
+
+	const [view_mode, setViewMode] = React.useState(saved_view_mode);
+
+	window.addEventListener('load', () => {
+		// check the view mode and mark corresponding button as 'pressed'
+		if (view_mode === "list") document.querySelector('button.list').classList.add("pressed");
+		if (view_mode === "grid") document.querySelector('button.grid').classList.add("pressed");
+	})
+	
+	
 
 	const [has_reached_end, setHasReachedEnd] = React.useState(false);
 
 	React.useEffect(() => {
 		if (catalog_size === products.length) setHasReachedEnd(true);
 	}, []);
+
+
 
 	// used as a limit for the 'for' loop
 	let filters_size = filters.length;
@@ -95,11 +115,19 @@ function Catalog({filters}) {
 
 	function onViewSwitchClickHandler(event) {
 		if (event.currentTarget.classList.contains("grid")) {
+			setViewMode("grid");
+
 			document.querySelector("div#list_view > button").classList.remove("pressed");
 			event.currentTarget.classList.add("pressed");
+
+			window.sessionStorage.setItem('view_mode', JSON.stringify("grid"));
 		} else if (event.currentTarget.classList.contains("list")) {
+			setViewMode("list");
+
 			document.querySelector("div#grid_view > button").classList.remove("pressed");
 			event.currentTarget.classList.add("pressed");
+
+			window.sessionStorage.setItem('view_mode', JSON.stringify("list"));
 		}
 	}
 
@@ -117,12 +145,12 @@ function Catalog({filters}) {
 			<div id="view_container">
 				<div id="view">
 					<div id="grid_view">
-						<button type="button" className="grid" onClick={(event) => {setViewMode("grid"); onViewSwitchClickHandler(event)}}>
+						<button type="button" className="grid" onClick={onViewSwitchClickHandler}>
 							<img src={grid_icon} alt=""/>
 						</button>
 					</div>
 					<div id="list_view">
-						<button type="button" className="list pressed" onClick={(event) => {setViewMode("list"); onViewSwitchClickHandler(event)}}>
+						<button type="button" className="list" onClick={onViewSwitchClickHandler} >
 							<img src={list_icon} alt=""/>
 						</button>
 					</div>
