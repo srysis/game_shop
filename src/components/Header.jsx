@@ -56,7 +56,7 @@ function Header({ device_type, cart_content }) {
 
 	function onClickHandler(event) {
 		// reset 'catalog_size' when going to the home page directly for better UX
-		window.sessionStorage.setItem('catalog_size', JSON.stringify(3));
+		window.sessionStorage.setItem('catalog_size', JSON.stringify(6));
 
 		// force refresh the page if already on this page to update 'catalog'
 		if(event.target.href === window.location.href) window.location.reload();
