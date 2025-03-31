@@ -7,7 +7,7 @@ import CartProduct from "../components/cart/cart_product.jsx"
 import "../style/cart/cart.scss"
 import "../style/cart/mobile/cart.scss"
 
-function Cart( {products_in_cart, removeFunction} ) {
+function Cart( {products_in_cart, removeFunction, clearCartFunction} ) {
 	useTitle("Cart on Games Shop");
 
 	if (products_in_cart.length > 0) {
@@ -24,9 +24,14 @@ function Cart( {products_in_cart, removeFunction} ) {
 					return <CartProduct key={item.id} product={item} onRemove={removeFunction} />
 				})}
 				<hr />
-				<div id="total_price">
-					<div id="text"><h2>Total price:</h2></div>
-					<div id="price"><p>{`$${total_price}.00`}</p></div>
+				<div className="flex_container">
+					<div id="clear_cart_container">
+						<button type="button" onClick={clearCartFunction}>Clear cart</button>
+					</div>
+					<div id="total_price">
+						<div id="text"><h2>Total price:</h2></div>
+						<div id="price"><p>{`$${total_price}.00`}</p></div>
+					</div>
 				</div>
 			</div>
 		)
