@@ -12,24 +12,35 @@
 			background: transparent;
 		}
 
-		form#filters_form {
+		div#container {
 			display: none;
-			margin-top: 15px;
 
-			div.filters_container {
-				h3 {
+			form#filters_form {
+				margin-top: 15px;
+
+				div.filters_container {
+					h3 {
+						margin-left: 2vw;
+					}
+				}
+
+				label.checkbox_container {
+					width: 47%;
 					margin-left: 2vw;
+					font-size: 16px;
 				}
 			}
 
-			label.checkbox_container {
-				width: 47%;
-				margin-left: 2vw;
-				font-size: 16px;
+			div#reset_filters_container {
+				margin-top: 0;
+
+				button {
+					padding: 7px 3vw;
+				}
 			}
 		}
 
-		form#filters_form.active {
+		div#container.active {
 			display: block;
 		}
 	}
