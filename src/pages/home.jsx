@@ -29,7 +29,7 @@ function Home({device_type}) {
 
 	return(
 		<div id="home">
-			<Filters device_type={device_type} setFiltersFunction={setFiltersFunction} removeFilterFunction={removeFilter}/>
+			<Filters device_type={device_type} setFiltersFunction={setFiltersFunction} removeFilterFunction={removeFilter} resetFiltersFunction={resetFilters} />
 			<Catalog filters={filters} />
 		</div>
 	)
