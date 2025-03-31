@@ -176,12 +176,12 @@ function Catalog({filters}) {
 			<div id="view_container">
 				<div id="view">
 					<div id="grid_view">
-						<button type="button" className="grid" onClick={onViewSwitchClickHandler}>
+						<button type="button" className={view_mode === "grid" ? "grid pressed" : "grid"} onClick={onViewSwitchClickHandler}>
 							<img src={grid_icon} alt=""/>
 						</button>
 					</div>
 					<div id="list_view">
-						<button type="button" className="list" onClick={onViewSwitchClickHandler} >
+						<button type="button" className={view_mode === "list" ? "list pressed" : "list"} onClick={onViewSwitchClickHandler} >
 							<img src={list_icon} alt=""/>
 						</button>
 					</div>
