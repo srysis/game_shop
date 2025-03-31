@@ -43,6 +43,8 @@ function App() {
 
 	const [was_added, setAdded] = React.useState(false);
 	const [was_removed, setRemoved] = React.useState(false);
+	const [was_cleared, setCleared] = React.useState(false);
+
 
 	const initial_device_type = window.innerWidth < 500 ? "mobile" : "desktop";
 
@@ -59,7 +61,8 @@ function App() {
 	function showMessage(type) {
 		// reset states to clear all previous messages
 		setAdded(false);
-		setRemoved(false)
+		setRemoved(false);
+		setCleared(false);
 
 		if (type === "add") {
 			setAdded(true);
@@ -70,6 +73,11 @@ function App() {
 			setRemoved(true);
 
 			toggleMessage(type);
+
+		} else if (type === "clear") {
+			setCleared(true);
+
+			toggleMessage(type);
 		}
 	}
 
@@ -78,6 +86,8 @@ function App() {
 			setTimeout(setAddedMessageTimeout, 5000);
 		} else if (type === "remove") {
 			setTimeout(setRemovedMessageTimeout, 5000);
+		} else if (type === "clear") {
+			setTimeout(setClearedMessageTimeout, 5000);
 		}
 	}
 
@@ -89,9 +99,14 @@ function App() {
 		setRemoved(false);
 	}
 
+	function setClearedMessageTimeout() {
+		setCleared(false);
+	}
+
 	function resetMessages() {
 		setAdded(false);
 		setRemoved(false);
+		setCleared(false);
 	}
 
 	function canBeAddedToCart(product) {
@@ -112,13 +127,19 @@ function App() {
 		showMessage("remove");
 	}
 
+	function clearCart() {
+		setCartContent([]);
+
+		showMessage("clear");
+	}
+
 	return (
 		<BrowserRouter basename="/">
 			<Routes>
-				<Route element={<Layout device_type={device_type} was_added={was_added} was_removed={was_removed} cart_content={cart_content} resetMessages={resetMessages} />} >
+				<Route element={<Layout device_type={device_type} was_added={was_added} was_removed={was_removed} was_cleared={was_cleared} cart_content={cart_content} resetMessages={resetMessages} />} >
 					<Route path="/" element={<Home device_type={device_type} />} />
 					<Route path="/product/:id" element={<ProductPage device_type={device_type} addToCartFunction={addToCart} isDuplicate={canBeAddedToCart} />} />
-					<Route path="/cart" element={<Cart products_in_cart={cart_content} removeFunction={removeFromCart} />} />
+					<Route path="/cart" element={<Cart products_in_cart={cart_content} removeFunction={removeFromCart} clearCartFunction={clearCart} />} />
 				</Route>
 				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
