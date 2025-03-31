@@ -18,8 +18,6 @@ function Catalog({filters}) {
 		window.scrollTo(0, JSON.parse(window.sessionStorage.getItem('scroll_pos')));
 	}
 
-
-
 	let saved_catalog_size = JSON.parse(window.sessionStorage.getItem('catalog_size'));
 
 	// initialize 'catalog_size' if session key has not been created yet
@@ -158,7 +156,6 @@ function Catalog({filters}) {
 
 		if (button != null) {
 			if (isVisibleInViewport(button, 100)) {
-				console.log("visible");
 				button.click();
 			}
 		}
@@ -169,6 +166,14 @@ function Catalog({filters}) {
 		if (has_reached_end) window.removeEventListener("scroll", loadMoreProducts);
 	}, [has_reached_end])
 	
+
+	window.addEventListener('beforeunload', onBeforeUnloadHandler)
+
+
+	function onBeforeUnloadHandler() {
+		window.sessionStorage.setItem('catalog_size', JSON.stringify(6));
+		window.sessionStorage.setItem('scroll_pos', JSON.stringify(0));
+	}
 
 
 	return(
