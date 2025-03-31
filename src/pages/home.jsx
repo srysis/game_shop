@@ -11,7 +11,15 @@ import "../style/home/mobile/home.scss"
 function Home({device_type}) {
 	useTitle("Games Shop");
 
-	const [filters, setFilters] = React.useState([]);
+	let saved_filters = JSON.parse(window.sessionStorage.getItem('filters'));
+
+	if (saved_filters === null) saved_filters = [];
+
+	const [filters, setFilters] = React.useState(saved_filters);
+
+	React.useEffect(() => {
+		window.sessionStorage.setItem('filters', JSON.stringify(filters));
+	}, [filters])
 
 	function setFiltersFunction(filter) {
 		setFilters([...filters, filter]);
