@@ -55,9 +55,16 @@ function Header({ device_type, cart_content }) {
 	}
 
 	function onClickHandler(event) {
+		window.sessionStorage.setItem('scroll_pos', JSON.stringify(0));
+
 		// force refresh the page if already on this page
+		// also reset all relevant UI data
 		if (event.target.href === window.location.href) {
-			window.sessionStorage.clear();
+			window.sessionStorage.setItem('catalog_size', JSON.stringify(6));
+			window.sessionStorage.setItem('checkboxes', JSON.stringify([]));
+			window.sessionStorage.setItem('filter_titles', JSON.stringify([]));
+			window.sessionStorage.setItem('filters', JSON.stringify([]));
+
 			window.location.reload();
 		}
 	}
@@ -72,7 +79,7 @@ function Header({ device_type, cart_content }) {
 					<div id="cart_overlay" onClick={() => setCartActiveFunction(false)} ></div>
 				}
 				<div id="logo_container">
-					<h1 id="logo"><Link to="" onClick={onClickHandler} >Game Shop</Link></h1>
+					<h1 id="logo"><Link to="/" onClick={onClickHandler} >Game Shop</Link></h1>
 				</div>
 				<div id="search_container">
 					<SearchBar setSearchQueueFunction={setSearchQueueFunction} setSearchingFunction={setSearchingFunction} />
