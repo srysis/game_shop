@@ -14,6 +14,7 @@ function App() {
 	// important change that allows to manually handle scrolling on 'popstate' event
 	window.history.scrollRestoration = 'manual';
 
+
 	// attempt to retrieve data from 'sessionStorage', if it doesn't exist - initialize it with empty array, so the app can work properly
 	if (window.sessionStorage.getItem('cart_data') === null) window.sessionStorage.setItem('cart_data', JSON.stringify([]));
 
@@ -41,9 +42,11 @@ function App() {
 	}, [cart_content]);
 
 
+
 	const [was_added, setAdded] = React.useState(false);
 	const [was_removed, setRemoved] = React.useState(false);
 	const [was_cleared, setCleared] = React.useState(false);
+
 
 
 	const initial_device_type = window.innerWidth < 500 ? "mobile" : "desktop";
@@ -57,6 +60,8 @@ function App() {
 			setDeviceType("mobile");
 		}
 	})
+
+
 
 	function showMessage(type) {
 		// reset states to clear all previous messages
@@ -108,6 +113,8 @@ function App() {
 		setRemoved(false);
 		setCleared(false);
 	}
+
+
 
 	function canBeAddedToCart(product) {
 		return (cart_content.includes(product));
