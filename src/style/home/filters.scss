@@ -21,6 +21,10 @@ div#filters {
 				cursor: pointer;
 			}
 
+			h3 + div {
+				display: none;
+			}
+
 			h3:hover {
 				text-shadow: 0px 0px 1px #000;
 			}
@@ -33,11 +37,7 @@ div#filters {
 				content: '▲';
 			}
 
-			div {
-				display: none;
-			}
-
-			div.visible {
+			h3.active + div {
 				display: block;
 			}
 		}
