@@ -27,6 +27,7 @@
 
 					h2 {
 						margin-bottom: 3px;
+						font-size: 1.6em;
 					}
 
 					p {
@@ -42,6 +43,16 @@
 							width: 25px;
 						}
 					}
+				}
+			}
+		}
+
+		div.flex_container {
+			margin-top: 5px;
+
+			div#clear_cart_container {
+				button {
+					padding: 10px 3vw;
 				}
 			}
 		}
