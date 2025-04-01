@@ -83,14 +83,23 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 	}
 
 	function tickCheckboxes() {
+		// untick all checkboxes before searching for ones that need to be ticked
+		untickAllCheckboxes();
+
 		const filter_checkboxes = document.querySelectorAll("input[type='checkbox']");
 
-		for (let checked_checkbox of checked_checkboxes) {
+		for (let checked_checkbox_id of checked_checkboxes) {
 			for (let filter_checkbox of filter_checkboxes) {
-				if (filter_checkbox.id === checked_checkbox) { 
-					filter_checkbox.checked = true;
-				}
+				if (filter_checkbox.id === checked_checkbox_id) filter_checkbox.checked = true;
 			}
+		}
+	}
+
+	function untickAllCheckboxes() {
+		const filter_checkboxes = document.querySelectorAll("input[type='checkbox']");
+
+		for (let filter_checkbox of filter_checkboxes) {
+			filter_checkbox.checked = false;
 		}
 	}
 
@@ -126,6 +135,7 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 
 	window.addEventListener('popstate', tickCheckboxes);
 	window.addEventListener('load', tickCheckboxes);
+	
 
 	return(
 		<div id="filters">
