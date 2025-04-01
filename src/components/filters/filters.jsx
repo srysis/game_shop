@@ -31,9 +31,28 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 	}, [active_filter_titles]);
 
 
+
+	let filters_active_in_session = JSON.parse(window.sessionStorage.getItem('filters_active'));
+
+	if (filters_active_in_session === null) filters_active_in_session = false;
+
+	const [are_filters_active, setFiltersActive] = React.useState(filters_active_in_session);
+
+	React.useEffect(() => {
+		window.sessionStorage.setItem('filters_active', JSON.stringify(are_filters_active));
+	}, [are_filters_active]);
+
+
+
 	function toggleFilters(event) {
 		const container = document.querySelector("div#container");
 		container.classList.toggle("active");
+
+		if (container.classList.contains("active")) {
+			setFiltersActive(true);
+		} else {
+			setFiltersActive(false);
+		}
 	}
 
 	function toggleFiltersList(event) {
@@ -146,7 +165,7 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 				</>
 			}
 			{ device_type === "desktop" && <h2>Filters</h2> }
-			<div id="container">
+			<div id="container" className={are_filters_active ? "active" : " "}>
 				<form id="filters_form">
 					<div className="filters_container">
 						<h3 onClick={toggleFiltersList} className="filters_title" id="genre" >Genre</h3>
