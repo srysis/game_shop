@@ -2,7 +2,7 @@
 
 This is a '*proof-of-concept*' online shop for different types of games.  
 It does not have an ability to actually buy games, but this website serves as a 'template' for a potentially existing online shop. 
-This app serves as a test of skills I have gained in a year of learning Front-End development.
+This app serves as a test of skills I have gained in a year of learning Front-End development.  
 
 
 ## Link
