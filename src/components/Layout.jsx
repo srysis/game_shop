@@ -3,6 +3,7 @@ import React from "react"
 import { Outlet } from 'react-router-dom'
 
 import Header from "./Header.jsx"
+import Footer from "./Footer.jsx"
 import SuccessAddMessage from "./SuccessMessage.jsx"
 import SuccessRemoveMessage from "./SuccessMessage.jsx"
 import SuccessClearMessage from "./SuccessMessage.jsx"
@@ -28,6 +29,7 @@ function Layout( {device_type, was_added, was_removed, was_cleared, cart_content
 			<main>
 				<Outlet />
 			</main>
+			<Footer />
 		</>
 	);
 }
