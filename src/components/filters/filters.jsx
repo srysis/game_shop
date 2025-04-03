@@ -150,10 +150,14 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 	}
 
 	window.addEventListener('popstate', showFiltersList);
-	window.addEventListener('load', showFiltersList);
 
 	window.addEventListener('popstate', tickCheckboxes);
-	window.addEventListener('load', tickCheckboxes);
+
+	// call both functions on component load
+	React.useEffect(() => {
+		showFiltersList();
+		tickCheckboxes();
+	}, [])
 	
 
 	return(
@@ -165,7 +169,7 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 				</>
 			}
 			{ device_type === "desktop" && <h2>Filters</h2> }
-			<div id="container" className={are_filters_active ? "active" : " "}>
+			<div id="container" className={are_filters_active ? "active" : " "} >
 				<form id="filters_form">
 					<div className="filters_container">
 						<h3 onClick={toggleFiltersList} className="filters_title" id="genre" >Genre</h3>
