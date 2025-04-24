@@ -1,8 +1,8 @@
 {
   "name": "online_shop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "homepage": "http://THE_URL.com/",
+  "homepage": "http://srysis-game-shop.com/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
