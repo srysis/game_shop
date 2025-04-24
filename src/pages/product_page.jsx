@@ -27,6 +27,10 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 
 	let is_duplicate = isDuplicate(product);
 
+	React.useEffect(() => {
+		document.title = `Buy ${name} on Games Shop`;
+	}, [name]);
+
 	function setFullscreenState(value) {
 		toggleFullscreen(value);
 
