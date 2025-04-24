@@ -7,7 +7,7 @@ This app serves as a test of skills I have gained in a year of learning Front-En
 
 ## Link
 
-The current version(0.6.5) of this app can be viewed [here](https://srysis-game-shop.netlify.app/).
+The latest version of this app can be viewed [here](https://srysis-game-shop.netlify.app/).
 
 
 ## Features 
