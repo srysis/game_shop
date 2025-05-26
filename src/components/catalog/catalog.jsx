@@ -12,11 +12,16 @@ import ProductGrid from "./product_grid.jsx"
 import ProductList from "./product_list.jsx"
 
 function Catalog({filters}) {
-	window.addEventListener('popstate', onPopStateHandler);
+	let scroll_positions = JSON.parse(window.sessionStorage.getItem('scroll_positions'));
 
-	function onPopStateHandler(event) {
-		window.scrollTo(0, JSON.parse(window.sessionStorage.getItem('scroll_pos')));
-	}
+	if (scroll_positions === null) scroll_positions = [];
+
+	
+	window.addEventListener('popstate', () => {
+		window.scrollTo(0, 0);
+	});
+
+
 
 	let saved_catalog_size = JSON.parse(window.sessionStorage.getItem('catalog_size'));
 
@@ -131,7 +136,8 @@ function Catalog({filters}) {
 
 	function onProductClickHandler(event) {
 		// store scroll position BEFORE scrolling to the top
-		window.sessionStorage.setItem('scroll_pos', JSON.stringify(window.scrollY));
+		scroll_positions.push(window.scrollY);
+		window.sessionStorage.setItem('scroll_positions', JSON.stringify(scroll_positions));
 
 		window.scrollTo(0, 0);
 
@@ -172,7 +178,7 @@ function Catalog({filters}) {
 
 	function onBeforeUnloadHandler() {
 		window.sessionStorage.setItem('catalog_size', JSON.stringify(6));
-		window.sessionStorage.setItem('scroll_pos', JSON.stringify(0));
+		window.sessionStorage.setItem('scroll_positions', JSON.stringify([]));
 	}
 
 
