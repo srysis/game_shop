@@ -7,7 +7,7 @@ import Filter from "./filter.jsx"
 import "../../style/home/filters.scss"
 import "../../style/home/mobile/filters.scss"
 
-function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFiltersFunction}) {
+function Filters({device_type, active_filters, setFiltersFunction, removeFilterFunction, resetFiltersFunction}) {
 	let saved_checkboxes = JSON.parse(window.sessionStorage.getItem('checkboxes'));
 
 	if (saved_checkboxes === null) saved_checkboxes = [];
@@ -136,6 +136,59 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 	}
 
 
+	function onActiveFilterClickHandler(filter) {
+		const exception_filters = ["FPS", "MMORPG", "RPG"];
+
+		let active_filter = filter;
+
+
+		for (let exception_filter of exception_filters) {
+			if (active_filter === exception_filter) {
+
+				let checkbox = document.querySelector(`input[value='${active_filter}']`);
+				checkbox.checked = false;
+
+				removeFilterFunction(active_filter.toLowerCase());
+				removeCheckboxFromSession(checkbox.id);
+
+				return;
+			}
+		}
+
+
+		if (active_filter === "PVP" || active_filter === "PVE") {
+			active_filter = active_filter.replace("V", "v");
+				
+			let checkbox = document.querySelector(`input[value='${active_filter}']`);
+			checkbox.checked = false;
+
+			removeFilterFunction(active_filter.toLowerCase());
+			removeCheckboxFromSession(checkbox.id);
+
+			return;
+		}
+
+
+		active_filter = active_filter.split(" ");
+
+		let temp_string = "";
+
+		for (let word of active_filter) {
+			temp_string += word.charAt(0) + word.slice(1).toLowerCase() + ",";
+		}
+
+		temp_string = temp_string.substring(0, temp_string.length - 1);
+		
+		active_filter = temp_string.replace(",", " ");
+
+		let checkbox = document.querySelector(`input[value='${active_filter}']`);
+		checkbox.checked = false;
+
+		removeFilterFunction(active_filter.toLowerCase());
+		removeCheckboxFromSession(checkbox.id);
+	}
+
+
 	function showFiltersList() {
 		const stored_titles = JSON.parse(window.sessionStorage.getItem('filter_titles'));
 		const filter_titles = document.querySelectorAll('h3.filters_title');
@@ -169,6 +222,16 @@ function Filters({device_type, setFiltersFunction, removeFilterFunction, resetFi
 				</>
 			}
 			{ device_type === "desktop" && <h2>Filters</h2> }
+			{ active_filters.length > 0 && 
+				<div id="active_filters">
+					{ active_filters.map((active_filter, index) => {
+						return <span key={index} className="active_filter" onClick={() => { onActiveFilterClickHandler(active_filter.toUpperCase()) } }>{active_filter.toUpperCase()}
+									<span>X</span>
+							   </span>
+					  }) 
+					}
+				</div>
+			}
 			<div id="container" className={are_filters_active ? "active" : " "} >
 				<form id="filters_form">
 					<div className="filters_container">
