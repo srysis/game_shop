@@ -54,6 +54,23 @@ function ProductPage({device_type, addToCartFunction, isDuplicate}) {
 		setCurrentImageIndex(index);
 	}
 
+
+	let scroll_positions = JSON.parse(window.sessionStorage.getItem('scroll_positions'));
+
+	if (scroll_positions === null) scroll_positions = [];
+
+	window.addEventListener('popstate', onPopStateHandler);
+
+	function onPopStateHandler(event) {
+		let last_scroll_position = scroll_positions[scroll_positions.length - 1];
+		window.scrollTo(0, last_scroll_position);
+
+		scroll_positions.pop();
+		window.sessionStorage.setItem('scroll_positions', JSON.stringify(scroll_positions));
+		window.removeEventListener('popstate', onPopStateHandler);
+	}
+	
+
 	function onAddHandler(item) {
 		if (isDuplicate(item)) { 
 			return;
