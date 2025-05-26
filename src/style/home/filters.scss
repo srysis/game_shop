@@ -12,6 +12,39 @@ div#filters {
 		border-bottom: 2px solid black;
 	}
 
+	div#active_filters {
+		margin-top: 20px;
+
+		span.active_filter {
+			display: inline-block;
+			margin-top: 5px;
+			margin-right: 5px;
+			border: 1px solid #888;
+			border-radius: 5px;
+			padding: 1px 10px;
+			background-color: #000;
+			color: #fff;
+			font-size: 1.1em;
+			font-weight: bold;
+			cursor: pointer;
+
+			span {
+				margin-left: 10px;
+				border-left: 1px solid #999;
+				padding-left: 11px;
+				padding-right: 3px;
+			}
+		}
+
+		span.active_filter:hover {
+			background-color: #333;
+		}
+
+		span.active_filter:active {
+			background-color: #111;
+		}
+	}
+
 	form {
 		div.filters_container {
 			margin: 20px 0;
