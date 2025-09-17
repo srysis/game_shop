@@ -36,3 +36,6 @@ As a 'database', it uses a pre-written JSON file with required information for e
 
 All the information as well as assets were taken from corresponding product pages on [Steam Store](https://store.steampowered.com/).
 All materials used in this web-site were used with educational purpose and no money are being made off of it.
+
+
+### This repo was archived on '17/09/2025' as it is outdated and no longer being updated, due to alternative version of this app existing.
